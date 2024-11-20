@@ -1,0 +1,129 @@
+/** Global *******************************************/
+*{
+	all: unset;
+	font-family: "JetBrains Mono";
+	color:  #888888 ;
+}
+
+/** Bar ***********************************/
+.dockbox {
+	background-color: #333333;
+	border-radius: 6px;
+}
+
+/** Icons ***********************************/
+.appicon {
+    background-repeat: no-repeat;
+	background-size: 26px;
+	min-height: 26px;
+	min-width: 30px;
+}
+.nix {
+    background-repeat: no-repeat;
+	background-size: 80px;
+	min-height: 70px;
+	min-width: 80px;
+}
+.trash {
+    background-repeat: no-repeat;
+	background-size: 35px;
+	min-height: 35px;
+	min-width: 35px;
+}
+.arrows {
+    background-repeat: no-repeat;
+	background-size: 25px;
+	min-height: 20px;
+	min-width: 18px;
+	padding: 5px;
+}
+.appicon-volume {
+    background-repeat: no-repeat;
+	background-size: 24px;
+	min-height: 24px;
+	min-width: 24px;
+}
+
+.workspace {
+	background-color: #1E1F28;
+	border: 2px solid #161616;
+	border-radius: 16px;
+	font-size : 14px;
+	padding: 0px 6px 0px 6px;
+	margin: -2px 0px 0px 0px;
+	font-weight : bold;
+}
+
+/** Clock ********************************************/
+.clockbox {
+	margin : 0px 0px 0px 15px;
+}
+
+.time {
+	font-size : 14px;
+	font-weight : bold;
+}
+
+.date {
+	font-size : 12px;
+	font-weight : bold;
+}
+
+/** System *************************************************/
+.infotext {
+	background-color: #333333;
+	border: 0px solid #161616;
+	border-radius: 16px;
+	font-size : 14px;
+	padding: 0px 5px 0px 5px;
+	margin: 10px 0px 10px 0px;
+	font-weight : bold;
+}
+.root{
+	color : #888888;
+}
+
+.face {
+	background-size: 23px;
+	min-height: 24px;
+	min-width: 24px;
+	margin: 8px 0px 8px 0px;
+	border-radius: 100%;
+}
+
+.hardware {
+	background-size: 20px;
+	min-height: 20px;
+	min-width: 20px;
+	margin: 8px 0px 8px 0px;
+}
+
+.cpu{
+	color : #F25E51;
+	font-size : 10px;
+}
+
+.ram{
+	color : #E6C384;
+	font-size : 10px;
+}
+
+.fan{
+	color : #97BA6B;
+	font-size : 10px;
+}
+
+.storage{
+	color : #7E9CD8;
+	font-size : 10px;
+}
+
+.photo{
+	color : #97BA6B;
+	font-size : 10px;
+}
+
+.trash{
+	color : #87bece;
+	font-size : 10px;
+}
