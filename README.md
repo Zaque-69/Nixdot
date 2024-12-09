@@ -2,7 +2,7 @@
   <img width="300" alt="webui" src="assets/readme/logo.png">
 </p>
 
-## NixDot
+## NixDot x Attack on Titan
 This repo contain a Python script designed for systems configured with Hyprland. It enables users to switch the system's background theme by running commands like theme1, theme2, ..., theme12 in the terminal. The script leverages Nix's declarative capabilities to manage and apply themes efficiently. The script can be run after the instalation.
 
 ## Key Features

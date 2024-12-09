@@ -14,10 +14,7 @@ pkgs.mkShell {
     chmod +x $HOME/.config/eww/scripts/apps.sh
   
     mkdir $HOME/.config/bin
-
-    nix-build packages/awesome-piracy.nix
-    sudo mv result $HOME/Desktop
-
+    
     nix build .#bcrypt-tool
     sudo mv result/bin/bcrypt-tool $HOME/.config/bin
     rm -rf result
@@ -28,7 +25,7 @@ pkgs.mkShell {
     rm -rf result
 
     nix build .#zen
-    sudo mv result zen
+    sudo mv result/bin result/zen
     sudo mv result/zen $HOME/.config/bin
   '';
 } 

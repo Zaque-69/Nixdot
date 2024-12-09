@@ -4,8 +4,10 @@
     enable = true;
     profiles.defualt = {
 
-      search.force = true;
-      search.default = "DuckDuckGo";
+      search = {
+        default = "DuckDuckGo";
+        force = true;
+      };
 
       bookmarks = [
         {
@@ -41,6 +43,7 @@
         youtube-nonstop
       ];
     };
+
     languagePacks = [ "ro" "en-US"];
   };
 }

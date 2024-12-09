@@ -25,9 +25,11 @@
   };
 
   programs.home-manager.enable = true;
-
   nixpkgs.config.allowUnfree = true;
-  home.username = "z4que";
-  home.homeDirectory = "/home/z4que";
-  home.stateVersion = "23.11";
+  
+  home = {
+    username = "z4que";
+    homeDirectory = "/home/z4que";
+    stateVersion = "23.11";
+  };
 }

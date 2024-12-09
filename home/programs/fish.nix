@@ -5,7 +5,7 @@
   programs.fish = {
     enable = true;
     shellAbbrs = {
-      #others
+
       "npu" = "nix-prefetch-url";
       "code" = "code --ozone-platform-hint . .";
       "helix" = "/home/z4que/.config/bin/helix/hx";
@@ -16,13 +16,11 @@
       "CLEAR" = "clear";
       "sl" = "ls";
 
-      #added in "$HOME/.config"
       "passwords" = "sops $HOME/.config/secrets/secrets.yaml";
       "bcrypt" = "$HOME/.config/bin/bcrypt-tool";
       "nvim" = "nix run $HOME/.config/nvim# --";
-      "zen" = "HOME/.config/zen/bin/zen";
+      "zen" = "$HOME/.config/bin/zen/zen";
 
-      #themes
       "theme1" = "cd $HOME/.config/Hyprimage && python theme.pyc backgrounds/annie1.png";
       "theme2" = "cd $HOME/.config/Hyprimage && python theme.pyc backgrounds/annie.png";
       "theme3" = "cd $HOME/.config/Hyprimage && python theme.pyc backgrounds/aot1.png";
