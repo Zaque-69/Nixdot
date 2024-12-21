@@ -6,7 +6,7 @@
         ./hardware.nix
         ./i18n.nix
         ./network.nix
-        ./nix.nix
+        ./nixos.nix
         ./programs.nix
         ./system.nix
         ./services

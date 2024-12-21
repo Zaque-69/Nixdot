@@ -1,6 +1,9 @@
 {
     imports = [
+        ./cli.nix
+        ./desktop.nix
         ./languages.nix
-        ./packages.nix
+        ./nixos.nix
+        ./wayland.nix
     ];
 }

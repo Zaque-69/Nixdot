@@ -86,7 +86,7 @@
           extraSpecialArgs = { inherit inputs; inherit sops-nix; };
           modules = [
             ./hosts/desktop/home.nix
-            ./packages/spicetify.nix
+            ./packages/desktop/spicetify.nix
           ];
         };
       };
