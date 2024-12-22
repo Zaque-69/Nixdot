@@ -13,12 +13,14 @@
       "CLEAR" = "clear";
       "sl" = "ls";
 
-      "npu" = "nix-prefetch-url";
-      "code" = "code --ozone-platform-hint . .";
       "bcrypt" = "$HOME/Desktop/bcrypt/bcrypt-tool";
+      "code" = "code --ozone-platform-hint . .";
       "helix" = "$HOME/Desktop/helix/bin/hx";
+      "nixgen" = "python $HOME/Desktop/nixgen/nixgen/main.py";
+      "npu" = "nix-prefetch-url";
       "nvim" = "nix run $HOME/.config/nvim# --";
       "passwords" = "sops $HOME/.config/secrets/secrets.yaml";
+      "scooby" = "python $HOME/Desktop/scooby/scooby/main.py";
       "zen" = "$HOME/Desktop/zen/bin/zen-bin";
 
       "theme1" = "cd $HOME/.config/Hyprimage && python theme.pyc backgrounds/annie1.png";

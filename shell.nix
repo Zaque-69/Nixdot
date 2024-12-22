@@ -26,6 +26,14 @@ pkgs.mkShell {
     sudo cp -r result zen
     mv zen $HOME/Desktop
 
+    nix-build packages/fetch/nixgen.nix
+    sudo cp -r result nixgen
+    mv nixgen $HOME/Desktop
+
+    nix-build packages/fetch/scooby.nix
+    sudo cp -r result scooby
+    mv scooby $HOME/Desktop
+
     rm -rf result
   '';
 } 
