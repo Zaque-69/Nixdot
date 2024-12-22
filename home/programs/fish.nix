@@ -6,9 +6,6 @@
     enable = true;
     shellAbbrs = {
 
-      "npu" = "nix-prefetch-url";
-      "code" = "code --ozone-platform-hint . .";
-      "helix" = "/home/z4que/.config/bin/helix/hx";
       "dc" = "cd";
       "clera" = "clear";
       "claer" = "clear";
@@ -16,13 +13,16 @@
       "CLEAR" = "clear";
       "sl" = "ls";
 
-      "passwords" = "sops $HOME/.config/secrets/secrets.yaml";
-      "bcrypt" = "$HOME/.config/bin/bcrypt-tool";
+      "npu" = "nix-prefetch-url";
+      "code" = "code --ozone-platform-hint . .";
+      "bcrypt" = "$HOME/Desktop/bcrypt/bcrypt-tool";
+      "helix" = "$HOME/Desktop/helix/bin/hx";
       "nvim" = "nix run $HOME/.config/nvim# --";
-      "zen" = "$HOME/.config/bin/zen/zen";
+      "passwords" = "sops $HOME/.config/secrets/secrets.yaml";
+      "zen" = "$HOME/Desktop/zen/bin/zen-bin";
 
       "theme1" = "cd $HOME/.config/Hyprimage && python theme.pyc backgrounds/annie1.png";
-      "theme2" = "cd $HOME/.config/Hyprimage && python theme.pyc backgrounds/annie.png";
+      "theme2" = "cd $HOME/.config/Hyprimage && pwython theme.pyc backgrounds/annie.png";
       "theme3" = "cd $HOME/.config/Hyprimage && python theme.pyc backgrounds/aot1.png";
       "theme4" = "cd $HOME/.config/Hyprimage && python theme.pyc backgrounds/aot.jpg";
       "theme5" = "cd $HOME/.config/Hyprimage && python theme.pyc backgrounds/eren1.jpg";

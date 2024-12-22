@@ -6,26 +6,26 @@ pkgs.mkShell {
     
     mv assets/wlogout/icons $HOME/.config/wlogout
     mv secrets $HOME/.config
+
     mv dotfiles/Hyprimage $HOME/.config
     mv packages/nvim $HOME/.config
     
     rm $HOME/.config/hypr/hyprland.conf && mv dotfiles/Hyprland/hyprland.conf $HOME/.config/hypr
-    rm -rf $HOME/.config/eww && mv dotfiles/eww $HOME/.config
+    rm -rf $HOME/.config/eww && mv dotfiles/eww/eww.zip $HOME/.config && unzip $HOME/.config/eww.zip && rm $HOME/.config/eww.zip
     chmod +x $HOME/.config/eww/scripts/apps.sh
-  
-    mkdir $HOME/.config/bin
-    
+      
     nix build .#bcrypt-tool
-    sudo mv result/bin/bcrypt-tool $HOME/.config/bin
-    rm -rf result
+    mkdir $HOME/Desktop/bcrypt
+    sudo mv result/bin/bcrypt-tool $HOME/Desktop/bcrypt
 
     nix build .#helix
-    sudo mv result/bin result/helix
-    sudo mv result/helix $HOME/.config/bin
-    rm -rf result
+    sudo cp -r result helix
+    mv helix $HOME/Desktop
 
     nix build .#zen
-    sudo mv result/bin result/zen
-    sudo mv result/zen $HOME/.config/bin
+    sudo cp -r result zen
+    mv zen $HOME/Desktop
+
+    rm -rf result
   '';
 } 
