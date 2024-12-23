@@ -86,3 +86,27 @@ After downloading all the stuff using home-manager, run the shell file to move s
 <p align = "center">
   <img width="800" alt="webui" src="assets/readme/12.png">
 </p>
+
+<p align = "center">
+  <img width="800" alt="webui" src="assets/readme/13.png">
+</p>
+
+<p align = "center">
+  <img width="800" alt="webui" src="assets/readme/14.png">
+</p>
+
+<p align = "center">
+  <img width="800" alt="webui" src="assets/readme/15.png">
+</p>
+
+<p align = "center">
+  <img width="800" alt="webui" src="assets/readme/16.png">
+</p>
+
+<p align = "center">
+  <img width="800" alt="webui" src="assets/readme/17.png">
+</p>
+
+<p align = "center">
+  <img width="800" alt="webui" src="assets/readme/18.png">
+</p>

@@ -6,9 +6,6 @@ pkgs.mkShell {
     
     mv assets/wlogout/icons $HOME/.config/wlogout
     mv secrets $HOME/.config
-
-    mv dotfiles/Hyprimage $HOME/.config
-    mv packages/nvim $HOME/.config
     
     rm $HOME/.config/hypr/hyprland.conf && mv dotfiles/Hyprland/hyprland.conf $HOME/.config/hypr
     rm -rf $HOME/.config/eww && mv dotfiles/eww/eww.zip $HOME/.config && unzip $HOME/.config/eww.zip && rm $HOME/.config/eww.zip
@@ -33,6 +30,14 @@ pkgs.mkShell {
     nix-build packages/fetch/scooby.nix
     sudo cp -r result scooby
     mv scooby $HOME/Desktop
+
+    nix-build packages/fetch/hyprimage.nix
+    sudo cp -r result hyprimage
+    mv hyprimage $HOME/Desktop
+    sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/backgrounds
+    sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/themes
+    sudo mv assets/backgrounds /home/z4que/Desktop/hyprimage/hyprimage/
+    sudo mv assets/themes /home/z4que/Desktop/hyprimage/hyprimage/
 
     rm -rf result
   '';

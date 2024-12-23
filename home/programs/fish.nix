@@ -16,25 +16,13 @@
       "bcrypt" = "$HOME/Desktop/bcrypt/bcrypt-tool";
       "code" = "code --ozone-platform-hint . .";
       "helix" = "$HOME/Desktop/helix/bin/hx";
+      "hyprimage" = "cd /home/z4que/Desktop/hyprimage/hyprimage && python main.py -t";
       "nixgen" = "python $HOME/Desktop/nixgen/nixgen/main.py";
       "npu" = "nix-prefetch-url";
       "nvim" = "nix run $HOME/.config/nvim# --";
       "passwords" = "sops $HOME/.config/secrets/secrets.yaml";
       "scooby" = "python $HOME/Desktop/scooby/scooby/main.py";
       "zen" = "$HOME/Desktop/zen/bin/zen-bin";
-
-      "theme1" = "cd $HOME/.config/Hyprimage && python theme.pyc backgrounds/annie1.png";
-      "theme2" = "cd $HOME/.config/Hyprimage && pwython theme.pyc backgrounds/annie.png";
-      "theme3" = "cd $HOME/.config/Hyprimage && python theme.pyc backgrounds/aot1.png";
-      "theme4" = "cd $HOME/.config/Hyprimage && python theme.pyc backgrounds/aot.jpg";
-      "theme5" = "cd $HOME/.config/Hyprimage && python theme.pyc backgrounds/eren1.jpg";
-      "theme6" = "cd $HOME/.config/Hyprimage && python theme.pyc backgrounds/eren2.jpg";
-      "theme7" = "cd $HOME/.config/Hyprimage && python theme.pyc backgrounds/historia.jpg";
-      "theme8" = "cd $HOME/.config/Hyprimage && python theme.pyc backgrounds/levi.png";
-      "theme9" = "cd $HOME/.config/Hyprimage && python theme.pyc backgrounds/levi1.png";
-      "theme10" = "cd $HOME/.config/Hyprimage && python theme.pyc backgrounds/mikasa1.jpeg";
-      "theme11" = "cd $HOME/.config/Hyprimage && python theme.pyc backgrounds/mikasa.png";
-      "theme12" = "cd $HOME/.config/Hyprimage && python theme.pyc backgrounds/sasha.jpg";
     };
     plugins = [
       {
