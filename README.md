@@ -13,7 +13,7 @@ This repo contain a Python script designed for systems configured with Hyprland.
 ## Demonstration 
 
 <p align = "center">
-  <img width="800" alt="webui" src="assets/readme/tutorial.mp4">
+  <img width="800" alt="webui" src="assets/readme/nix.gif">
 </p>
 
 ## Clone this repository:
