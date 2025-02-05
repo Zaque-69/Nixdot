@@ -36,8 +36,8 @@ pkgs.mkShell {
     mv hyprimage $HOME/Desktop
     sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/backgrounds
     sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/themes
-    sudo mv assets/backgrounds /home/z4que/Desktop/hyprimage/hyprimage/
-    sudo mv assets/themes /home/z4que/Desktop/hyprimage/hyprimage/
+    sudo cp -r assets/backgrounds /home/z4que/Desktop/hyprimage/hyprimage/
+    sudo cp -r assets/themes /home/z4que/Desktop/hyprimage/hyprimage/
 
     rm -rf result
   '';

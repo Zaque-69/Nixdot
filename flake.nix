@@ -23,6 +23,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    hyprland.url = "github:hyprwm/Hyprland?submodules=1";
+
     nixos-generators = {
       url = "github:nix-community/nixos-generators";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -52,7 +54,8 @@
   outputs = { 
     self,
     bcrypt-tool, 
-    helix, 
+    helix,
+    hyprland,
     home-manager, 
     nixos-generators, 
     nixpkgs, 
@@ -69,6 +72,7 @@
         inherit system;
         config.allowUnfree = true;
       };
+      
     in {
       nixosConfigurations = {
         inherit system;

@@ -3,17 +3,17 @@
 </p>
 
 ## NixDot x Attack on Titan
-This repo contain a Python script designed for systems configured with Hyprland. It enables users to switch the system's background theme by running commands like theme1, theme2, ..., theme12 in the terminal. The script leverages Nix's declarative capabilities to manage and apply themes efficiently. The script can be run after the instalation.
+This repo contain a Python script designed for systems configured with Hyprland. It enables users to switch the system's background theme by running commands like "hyprimage 1", "hyprimage 2", ..., "hyprimage 17" in the terminal. The script leverages Nix's declarative capabilities to manage and apply themes efficiently. The script can be run after the instalation.
 
 ## Key Features
-- **Simple Commands:** Change themes instantly with commands like `theme1` to `theme12`.
+- **Simple Commands:** Change themes instantly with commands like `hyprimage 1` to `hyprimage 17`.
 - **Python-Powered:** Built using Python for flexibility and ease of customization.
 - **Nix Integration:** Seamlessly integrates with Nix-managed configurations for consistent behavior.
 
 ## Demonstration 
 
 <p align = "center">
-  <img width="800" alt="webui" src="assets/readme/nix.gif">
+  <img width="800" alt="webui" src="assets/readme/tutorial.mp4">
 </p>
 
 ## Clone this repository:
@@ -36,6 +36,9 @@ After downloading all the stuff using home-manager, run the shell file to move s
   ```bash
   nix-shell
   ```
+## Updates
+- **05.02.2025: Nvdia drivers added to the configuration + Waybar modification** .
+
 
 # Images 
 

@@ -1,6 +1,21 @@
-{
+{ config, pkgs, ...} : {
+    
     hardware = {
-        graphics.enable = true;
-        nvidia.modesetting.enable = true;
-    };
+        nvidia = {
+            modesetting.enable = true;
+            powerManagement = { 
+                enable = false;
+                finegrained = false;
+            };
+            open = false;
+	        nvidiaSettings = true;
+            package = config.boot.kernelPackages.nvidiaPackages.stable;
+        };
+        opengl.enable = true;
+    }; 
+
+    environment.systemPackages = with pkgs; [
+        glxinfo
+        vulkan-tools
+    ];
 }

@@ -1,6 +1,6 @@
 {
     system = {
         switch.enable = true;
-        stateVersion = "23.11"; 
+        stateVersion = "25.05"; 
     };
-}
+} 

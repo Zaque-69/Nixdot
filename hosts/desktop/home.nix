@@ -24,12 +24,18 @@
     age.keyFile = "$HOME/.config/sops/age/keys.txt"; 
   };
 
-  programs.home-manager.enable = true;
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowBroken = true;
+    allowUnfree = true;
+  };
   
+  programs = { 
+    home-manager.enable = true;
+  };
+
   home = {
     username = "z4que";
     homeDirectory = "/home/z4que";
-    stateVersion = "23.11";
+    stateVersion = "25.05";
   };
 }

@@ -5,4 +5,5 @@
             extraGroups = [ "wheel" ]; 
         };
     };
+    security.polkit.enable = true;
 }

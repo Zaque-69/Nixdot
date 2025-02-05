@@ -1,5 +1,7 @@
 {
   boot = {
+    kernelModules = [ "nvidia" ];
+
     loader = {
       systemd-boot = {
         enable = true;
@@ -7,6 +9,7 @@
       };
       timeout = 5;
     };
+    
     tmp.cleanOnBoot = true;
     readOnlyNixStore = false;
   }; 
