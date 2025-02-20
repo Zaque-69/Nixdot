@@ -17,12 +17,14 @@
       "code" = "code --ozone-platform-hint . .";
       "helix" = "$HOME/Desktop/helix/bin/hx";
       "hyprimage" = "cd /home/z4que/Desktop/hyprimage/hyprimage && python main.py -t";
+      "lines" = "find . -type f -exec wc -l {} + | awk '{s+=$1} END {print s}'";
       "nixgen" = "python $HOME/Desktop/nixgen/nixgen/main.py";
       "npu" = "nix-prefetch-url";
       "nvim" = "nix run $HOME/.config/nvim# --";
       "passwords" = "sops $HOME/.config/secrets/secrets.yaml";
       "scooby" = "python $HOME/Desktop/scooby/scooby/main.py";
       "zen" = "$HOME/Desktop/zen/bin/zen-bin";
+      
     };
     plugins = [
       {
