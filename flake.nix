@@ -25,11 +25,6 @@
 
     hyprland.url = "github:hyprwm/Hyprland?submodules=1";
 
-    nixos-generators = {
-      url = "github:nix-community/nixos-generators";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nixpkgs = {
       url = "nixpkgs/nixos-unstable";
     };
@@ -57,7 +52,6 @@
     helix,
     hyprland,
     home-manager, 
-    nixos-generators, 
     nixpkgs, 
     sops-nix, 
     spicetify-nix, 
@@ -75,22 +69,39 @@
       
     in {
       nixosConfigurations = {
+
         inherit system;
-        nixos = nixpkgs.lib.nixosSystem {
+        desktop = nixpkgs.lib.nixosSystem {
           modules = [ 
             home-manager.nixosModules.home-manager 
             ./hosts/desktop/configuration.nix  
           ];
         };
+
+        laptop = nixpkgs.lib.nixosSystem {
+          modules = [ 
+            home-manager.nixosModules.home-manager 
+            ./hosts/laptop/configuration.nix  
+          ];
+        };
       };
       
       homeConfigurations = {
+
         z4que = inputs.home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           extraSpecialArgs = { inherit inputs; inherit sops-nix; };
           modules = [
             ./hosts/desktop/home.nix
             ./packages/desktop/spicetify.nix
+          ];
+        };
+
+        andrlenovo = inputs.home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          extraSpecialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/laptop/home.nix
           ];
         };
       };
