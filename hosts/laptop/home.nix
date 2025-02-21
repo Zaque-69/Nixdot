@@ -2,9 +2,9 @@
 
 {
   imports = [
-    ../../home/programs
+    ../../home/programs/firefox.nix
+    ../../home/programs/zathura.nix 
     ../../home/services
-    ../../home/packages
   ];
   
   programs = { 
