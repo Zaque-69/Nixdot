@@ -71,17 +71,17 @@
       nixosConfigurations = {
 
         inherit system;
-        desktop = nixpkgs.lib.nixosSystem {
+        z4que = nixpkgs.lib.nixosSystem {
           modules = [ 
             home-manager.nixosModules.home-manager 
-            ./hosts/desktop/configuration.nix  
+            ./hosts/desktop/z4que/configuration.nix  
           ];
         };
 
-        laptop = nixpkgs.lib.nixosSystem {
+        andrlenovo = nixpkgs.lib.nixosSystem {
           modules = [ 
             home-manager.nixosModules.home-manager 
-            ./hosts/laptop/configuration.nix  
+            ./hosts/laptop/andrlenovo/configuration.nix  
           ];
         };
       };
