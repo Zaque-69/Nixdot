@@ -25,14 +25,15 @@ The desktop configuration (mines) contain a Python script designed for systems c
    && cd /mnt/etc/nixos 
    && git clone https://Zaque-69/Nixdot.git 
    && mv Nixdot/* . 
-   && rm hosts/{device}/hardware-configuration.nix 
-   && mv hardware-configuration.nix hosts/{path} 
+   # optional, but recommanded if you changed some hardware
+   && rm hosts/{device}/{username}/hardware-configuration.nix 
+   && mv hardware-configuration.nix hosts/{device}/{username} 
    && nixos-install --flake .#device
    ```
 
 ## Rebuild the system ( If you already have installed a Desktop/Window manager )
    ```bash
-   nixos-rebuild switch --flake .#device
+   nixos-rebuild switch --flake .#user
    ```
 
 ## Download the packages
