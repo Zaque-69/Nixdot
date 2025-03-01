@@ -2,9 +2,9 @@
 
 {
   imports = [
-    ../../home/programs
-    ../../home/services
-    ../../home/packages
+    ../../../home/programs
+    ../../../home/services
+    ../../../home/packages
     sops-nix.homeManagerModules.sops
   ];
 
