@@ -84,9 +84,3 @@ The desktop configuration (mines) contain a Python script designed for systems c
 <p align = "center">
   <img width="800" alt="webui" src="/assets/readme/18.png">
 </p>
-
-### Lenovo configuration
-
-<p align = "center">
-  <img width="800" alt="webui" src="assets/readme/19.png">
-</p>
