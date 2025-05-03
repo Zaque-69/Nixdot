@@ -101,25 +101,25 @@ The desktop configuration (mines) contain a Python script designed for systems c
 ### Second theme on desktop
 
 <p align = "center">
-  <img width="800" alt="webui" src="assets/readme/100.png">
+  <img width="800" alt="webui" src="/assets/readme/100.png">
 </p>
 
 <p align = "center">
-  <img width="800" alt="webui" src="assets/readme/101.png">
+  <img width="800" alt="webui" src="/assets/readme/101.png">
 </p>
 
 <p align = "center">
-  <img width="800" alt="webui" src="assets/readme/102.png">
+  <img width="800" alt="webui" src="/assets/readme/102.png">
 </p>
 
 <p align = "center">
-  <img width="800" alt="webui" src="assets/readme/103.png">
+  <img width="800" alt="webui" src="/assets/readme/103.png">
 </p>
 
 <p align = "center">
-  <img width="800" alt="webui" src="assets/readme/104.png">
+  <img width="800" alt="webui" src="/assets/readme/104.png">
 </p>
 
 <p align = "center">
-  <img width="800" alt="webui" src="assets/readme/105.png">
+  <img width="800" alt="webui" src="/assets/readme/105.png">
 </p>
