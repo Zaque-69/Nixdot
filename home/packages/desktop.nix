@@ -11,6 +11,7 @@
         pinta                               #Drawing/editing program modeled after Paint.NET
         slurp                               #Select a region in a Wayland compositor
         superTux                            #Classic 2D jump'n run sidescroller game
+        tor-browser                         #Privacy-focused browser routing traffic through the Tor network
         tradingview                         #Charting platform for traders and investors
         vscode                              #Open source source code editor developed by Microsoft for Windows, Linux and macOS 
     ];

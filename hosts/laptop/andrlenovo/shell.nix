@@ -2,7 +2,6 @@
 
 pkgs.mkShell {
   shellHook = ''
-
     if ! command -v plasmashell &> /dev/null; then
         echo "KDE Plasma is not installed!"
         exit 1

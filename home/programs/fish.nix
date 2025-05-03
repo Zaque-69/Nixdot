@@ -5,16 +5,25 @@
   programs.fish = {
     enable = true;
     shellAbbrs = {
-
-      "dc" = "cd";
-      "clera" = "clear";
-      "claer" = "clear";
-      "cls" = "clear";
-      "CLEAR" = "clear";
-      "sl" = "ls";
-
+      "aot" = "sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/backgrounds/ &&
+        sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/themes/ &&
+        sudo mkdir $HOME/Desktop/hyprimage/hyprimage/backgrounds &&
+        sudo mkdir $HOME/Desktop/hyprimage/hyprimage/themes &&
+        sudo cp $HOME/Desktop/assets/backgrounds/aot/* $HOME/Desktop/hyprimage/hyprimage/backgrounds/ && 
+        sudo cp $HOME/Desktop/assets/themes/aot/* $HOME/Desktop/hyprimage/hyprimage/themes";
       "bcrypt" = "$HOME/Desktop/bcrypt/bcrypt-tool";
+      "CLEAR" = "clear";
+      "claer" = "clear";
+      "clera" = "clear";
+      "cls" = "clear";
       "code" = "code --ozone-platform-hint . .";
+      "dc" = "cd";
+      "dust&velvet" = "sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/backgrounds/ &&
+        sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/themes/ &&
+        sudo mkdir $HOME/Desktop/hyprimage/hyprimage/backgrounds &&
+        sudo mkdir $HOME/Desktop/hyprimage/hyprimage/themes &&
+        sudo cp $HOME/Desktop/assets/backgrounds/dust&velvet/* $HOME/Desktop/hyprimage/hyprimage/backgrounds/ && 
+        sudo cp $HOME/Desktop/assets/themes/dust&velvet/* $HOME/Desktop/hyprimage/hyprimage/themes";
       "helix" = "$HOME/Desktop/helix/bin/hx";
       "hyprimage" = "cd /home/z4que/Desktop/hyprimage/hyprimage && python main.py -t";
       "lines" = "find . -type f -exec wc -l {} + | awk '{s+=$1} END {print s}'";
@@ -23,6 +32,7 @@
       "nvim" = "nix run $HOME/.config/nvim# --";
       "passwords" = "sops $HOME/.config/secrets/secrets.yaml";
       "scooby" = "python $HOME/Desktop/scooby/scooby/main.py";
+      "sl" = "ls";
       "zen" = "$HOME/Desktop/zen/bin/zen-bin";
       
     };
