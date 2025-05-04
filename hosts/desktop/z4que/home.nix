@@ -15,7 +15,10 @@
     theme.package = pkgs.graphite-gtk-theme;
     font.name = "DejaVu";
     theme.name = "Graphite-Dark";
-    iconTheme.name = "Goldy-Dark-Icons";
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
   };
 
   sops = {
