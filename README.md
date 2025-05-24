@@ -36,5 +36,5 @@ After downloading all the stuff using home-manager, run the shell file to move s
 ## Updates
 - **05.02.2025: NVIDIA drivers added to the desktop configuration + Waybar modification** .
 - **21.02.2025: A new device was added : a lenovo Laptop with Ryzen 3, 1T HDD, 4GB RAM, minimalist configuration ( KDE DM )** .
-- **03.05.2025: New theme added on Desktop : "dust&velvet" .
-- **25.05.2025: New theme added on Desktop : "blackbg" .
+- **03.05.2025: New theme added on Desktop : "dust&velvet"** .
+- **25.05.2025: New theme added on Desktop : "blackbg"** .
