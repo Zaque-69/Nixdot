@@ -12,6 +12,12 @@
         sudo cp $HOME/Desktop/assets/backgrounds/aot/* $HOME/Desktop/hyprimage/hyprimage/backgrounds/ && 
         sudo cp $HOME/Desktop/assets/themes/aot/* $HOME/Desktop/hyprimage/hyprimage/themes";
       "bcrypt" = "$HOME/Desktop/bcrypt/bcrypt-tool";
+      "blackbg" = "sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/backgrounds/ &&
+        sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/themes/ &&
+        sudo mkdir $HOME/Desktop/hyprimage/hyprimage/backgrounds &&
+        sudo mkdir $HOME/Desktop/hyprimage/hyprimage/themes &&
+        sudo cp $HOME/Desktop/assets/backgrounds/blackbg/* $HOME/Desktop/hyprimage/hyprimage/backgrounds/ && 
+        sudo cp $HOME/Desktop/assets/themes/blackbg/* $HOME/Desktop/hyprimage/hyprimage/themes";
       "CLEAR" = "clear";
       "claer" = "clear";
       "clera" = "clear";

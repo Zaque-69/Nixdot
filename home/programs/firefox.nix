@@ -5,36 +5,39 @@
     profiles.defualt = {
 
       search = {
-        default = "DuckDuckGo";
+        default = "ddg";
         force = true;
       };
 
-      bookmarks = [
-        {
-          name = "♉";
-          toolbar = true;
-          bookmarks = [
-            {
-              name = "MyNixOS";
-              url = "https://mynixos.com/";
-            }
-            {
-              name = "Github";
-              url = "https://github.com/Zaque-69";
-            }
-            {
-              name = "NixSearch";
-              url = "https://search.nixos.org/packages";
-            }
-          ];
-        }
-      ];
+      bookmarks = {
+        force = true;
+        settings = [
+          {
+            name = "♉";
+            toolbar = true;
+            bookmarks = [
+              {
+                name = "MyNixOS";
+                url = "https://mynixos.com/";
+              }
+              {
+                name = "Github";
+                url = "https://github.com/Zaque-69";
+              }
+              {
+                name = "NixSearch";
+                url = "https://search.nixos.org/packages";
+              }
+            ];
+          }
+        ];
+      };
       settings = {
         "dom.security.https_only_mode" = true;
         "browser.download.panel.shown" = true;
       };
       
-      extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+      extensions.packages = with inputs.firefox-addons.packages."x86_64-linux"; [
         firefox-color
         return-youtube-dislikes
         simple-translate

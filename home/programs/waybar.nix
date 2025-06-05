@@ -63,22 +63,22 @@
       #pulseaudio.microphone {
         margin-right: 5px;
         color : #111111;
-        background-color : rgba(241, 241, 241, 0.5);
+        background-color : rgba(241, 241, 241, 0.7);
       }
       
       #pulseaudio {
-        background-color : rgba(241, 241, 241, 0.4);
+        background-color : rgba(241, 241, 241, 0.6);
         color : #111111;
       }
 
       #custom-date {
         color : #111111 ;
-        background-color : rgba(241, 241, 241, 0.3);
+        background-color : rgba(241, 241, 241, 0.5);
       }
 
       #custom-clock {
         color : #111111 ;
-        background-color : rgba(241, 241, 241, 0.2);
+        background-color : rgba(241, 241, 241, 0.4);
       }
 
       #custom-github,
@@ -91,7 +91,7 @@
         font-size : 1.5rem;
         padding-left : .5rem;
         padding-right : .5rem;
-        background-color : rgba(241, 241, 241, 0.1);
+        background-color : rgba(241, 241, 241, 0.3);
       }
 
       #custom-github {
