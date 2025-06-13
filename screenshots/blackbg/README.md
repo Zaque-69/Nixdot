@@ -21,23 +21,23 @@ From the configuration. In this example :
 ## Screenshots 
 
 <p align = "center">
-  <img width="800" alt="webui" src="assets/readme/200.png">
+  <img width="800" alt="webui" src="/assets/readme/200.png">
 </p>
 
 <p align = "center">
-  <img width="800" alt="webui" src="assets/readme/201.png">
+  <img width="800" alt="webui" src="/assets/readme/201.png">
 </p>
 
 <p align = "center">
-  <img width="800" alt="webui" src="assets/readme/202.png">
+  <img width="800" alt="webui" src="/assets/readme/202.png">
 </p>
 
 <p align = "center">
-  <img width="800" alt="webui" src="assets/readme/203.png">
+  <img width="800" alt="webui" src="/assets/readme/203.png">
 </p>
 
 <p align = "center">
-  <img width="800" alt="webui" src="assets/readme/204.png">
+  <img width="800" alt="webui" src="/assets/readme/204.png">
 </p>
 
 <p align = "center">
