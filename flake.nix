@@ -92,8 +92,8 @@
           inherit pkgs;
           extraSpecialArgs = { inherit inputs; inherit sops-nix; };
           modules = [
-            ./hosts/desktop/home.nix
-            ./packages/desktop/spicetify.nix
+            ./hosts/desktop/z4que/home.nix
+            /home/z4que/.config/spicetify_themes/spicetify.nix
           ];
         };
 
@@ -101,7 +101,7 @@
           inherit pkgs;
           extraSpecialArgs = { inherit inputs; };
           modules = [
-            ./hosts/laptop/home.nix
+            ./hosts/laptop/andrlenovo/home.nix
           ];
         };
       };

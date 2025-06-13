@@ -5,14 +5,20 @@
   programs.fish = {
     enable = true;
     shellAbbrs = {
-      "aot" = "sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/backgrounds/ &&
+      "aot" = "cp $HOME/.config/spicetify_themes/themes/spicetify_aot.nix $HOME/.config/spicetify_themes/themes/spicetify.nix && 
+        rm $HOME/.config/spicetify_themes/spicetify.nix && 
+        mv $HOME/.config/spicetify_themes/themes/spicetify.nix $HOME/.config/spicetify_themes/ && 
+        sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/backgrounds/ &&
         sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/themes/ &&
         sudo mkdir $HOME/Desktop/hyprimage/hyprimage/backgrounds &&
         sudo mkdir $HOME/Desktop/hyprimage/hyprimage/themes &&
         sudo cp $HOME/Desktop/assets/backgrounds/aot/* $HOME/Desktop/hyprimage/hyprimage/backgrounds/ && 
         sudo cp $HOME/Desktop/assets/themes/aot/* $HOME/Desktop/hyprimage/hyprimage/themes";
       "bcrypt" = "$HOME/Desktop/bcrypt/bcrypt-tool";
-      "blackbg" = "sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/backgrounds/ &&
+      "blackbg" = "cp $HOME/.config/spicetify_themes/themes/spicetify_blackbg.nix $HOME/.config/spicetify_themes/themes/spicetify.nix && 
+        rm $HOME/.config/spicetify_themes/spicetify.nix && 
+        mv $HOME/.config/spicetify_themes/themes/spicetify.nix $HOME/.config/spicetify_themes/ && 
+        sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/backgrounds/ &&
         sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/themes/ &&
         sudo mkdir $HOME/Desktop/hyprimage/hyprimage/backgrounds &&
         sudo mkdir $HOME/Desktop/hyprimage/hyprimage/themes &&
@@ -24,7 +30,10 @@
       "cls" = "clear";
       "code" = "code --ozone-platform-hint . .";
       "dc" = "cd";
-      "dust&velvet" = "sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/backgrounds/ &&
+      "dust&velvet" = "cp $HOME/.config/spicetify_themes/themes/spicetify_dust&velvet.nix $HOME/.config/spicetify_themes/themes/spicetify.nix && 
+        rm $HOME/.config/spicetify_themes/spicetify.nix && 
+        mv $HOME/.config/spicetify_themes/themes/spicetify.nix $HOME/.config/spicetify_themes/ && 
+        sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/backgrounds/ &&
         sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/themes/ &&
         sudo mkdir $HOME/Desktop/hyprimage/hyprimage/backgrounds &&
         sudo mkdir $HOME/Desktop/hyprimage/hyprimage/themes &&
@@ -37,6 +46,7 @@
       "npu" = "nix-prefetch-url";
       "nvim" = "nix run $HOME/.config/nvim# --";
       "passwords" = "sops $HOME/.config/secrets/secrets.yaml";
+      "pdf" = "libreoffice --headless --convert-to pdf";
       "scooby" = "python $HOME/Desktop/scooby/scooby/main.py";
       "sl" = "ls";
       "zen" = "$HOME/Desktop/zen/bin/zen-bin";

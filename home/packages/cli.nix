@@ -6,13 +6,13 @@
         curl                                        # Command line tool for transferring files with URL syntax
         direnv                                      # A shell extension that manages your environment
         dunst                                       # Lightweight and customizable notification daemon
+        file                                        # Program that shows the type of files
         gammastep                                   # Screen color temperature manager
         gdb                                         # The GNU Project debugger
         gotop                                       # Usage statistics ( CPU, GPU, RAM )
         grim                                        # Grab images from a Wayland compositor
         htop                                        # Usage statistics ( apps )
         hwinfo                                      # Hardware detection tool from openSUSE
-        killall                                     # Killing all the processes 
         lm_sensors                                  # Usage statistics
         neofetch                                    # A fast, highly customizable system info script
         nitch                                       # Simple PC presentation
@@ -32,5 +32,6 @@
         xorg.xev                                    # Key recorder
         yt-dlp                                      # Command-line tool to download videos from YouTube.com and other sites (youtube-dl fork)
         wget                                        # Tool for retrieving files using HTTP, HTTPS, and FTP
+        zsteg                                       # Detect stegano-hidden data in PNG & BMP
     ];
 }

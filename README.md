@@ -17,7 +17,7 @@ This repo contains more configurations, for different devices. Is not recommande
    && mv hardware-configuration.nix hosts/{device}/{username} 
    && nixos-install --flake .#device
    ```
-
+z
 ## Rebuild the system ( If you already have installed a Desktop/Window manager )
    ```bash
    nixos-rebuild switch --flake .#user
@@ -25,7 +25,7 @@ This repo contains more configurations, for different devices. Is not recommande
 
 ## Download the packages
   ``` bash
-  home-manager switch --flake .#user
+  home-manager switch --impure --flake .#user
   ```
 
 After downloading all the stuff using home-manager, run the shell file to move some directories and files from this configuration on your device : 
@@ -36,5 +36,4 @@ After downloading all the stuff using home-manager, run the shell file to move s
 ## Updates
 - **05.02.2025: NVIDIA drivers added to the desktop configuration + Waybar modification** .
 - **21.02.2025: A new device was added : a lenovo Laptop with Ryzen 3, 1T HDD, 4GB RAM, minimalist configuration ( KDE DM )** .
-- **03.05.2025: New theme added on Desktop : "dust&velvet"** .
-- **25.05.2025: New theme added on Desktop : "blackbg"** .
+- **2.05.2025: New themes & backgrounds for the Desktop configuration** .
