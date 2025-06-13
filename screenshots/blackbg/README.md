@@ -41,5 +41,5 @@ From the configuration. In this example :
 </p>
 
 <p align = "center">
-  <img width="800" alt="webui" src="assets/readme/205.png">
+  <img width="800" alt="webui" src="/assets/readme/205.png">
 </p>
