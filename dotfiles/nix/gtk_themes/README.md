@@ -1,0 +1,1 @@
+# Themes for GTK (Thunar)

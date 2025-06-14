@@ -88,7 +88,7 @@
         padding-right : .5rem;
         background-color : rgba(18, 18, 18, 0.3);
       }
-
+ 
       #custom-github {
         padding-right : 1rem;
       }

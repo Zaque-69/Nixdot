@@ -47,7 +47,8 @@ pkgs.mkShell {
     sudo mv assets/themes/dust&velvet $HOME/Desktop/themes
     sudo mv assets/themes/blackbg $HOME/Desktop/themes
 
-    mv dotfiles/spicetify_themes $HOME/.config
+    mv dotfiles/nix/spicetify_themes $HOME/.config
+    mv dotfiles/nix/gtk_themes $HOME/.config
 
     rm -rf result
   '';
