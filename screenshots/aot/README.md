@@ -8,11 +8,6 @@ Now just type the root password, and use the command :
 hyprimage 0
 ```
 
-The Hyprimage app will set the configuration number 0. You can choose from 0 to 17. After that, remember to apply the changes to all the apps, using : 
-```bash
-home-manager switch --impure --flake .#z4que
-```
-
 From the configuration. In this example : 
 - We changed the themes with Attack on Titan ones;
 - We changed to a specific Desktop, theme, whatever you want to name it;
