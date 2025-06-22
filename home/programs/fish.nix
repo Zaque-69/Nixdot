@@ -67,6 +67,20 @@
       "pdf" = "libreoffice --headless --convert-to pdf";
       "scooby" = "python $HOME/Desktop/scooby/scooby/main.py";
       "sl" = "ls";
+      "waybar1" = "pkill waybar
+        cp $HOME/.config/waybar_themes/themes/waybar1.nix $HOME/.config/waybar_themes/themes/waybar.nix && 
+        rm $HOME/.config/waybar_themes/waybar.nix && 
+        mv $HOME/.config/waybar_themes/themes/waybar.nix $HOME/.config/waybar_themes/ && 
+        cd /home/z4que/Desktop/dot-unstable && 
+        home-manager switch --impure --flake .#z4que &&
+        waybar";
+      "waybar2" = "pkill waybar
+        cp $HOME/.config/waybar_themes/themes/waybar2.nix $HOME/.config/waybar_themes/themes/waybar.nix && 
+        rm $HOME/.config/waybar_themes/waybar.nix && 
+        mv $HOME/.config/waybar_themes/themes/waybar.nix $HOME/.config/waybar_themes/ && 
+        cd /home/z4que/Desktop/dot-unstable && 
+        home-manager switch --impure --flake .#z4que && 
+        waybar";
       "zen" = "$HOME/Desktop/zen/bin/zen-bin"; 
       
     };

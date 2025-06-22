@@ -36,11 +36,11 @@
         background-color : #2d253a;
         padding : 1.5px 10px;    
         margin: 1.5px ;
-        margin-bottom : 1px;
+        margin-bottom : 5px;
       }
 
       window#waybar {
-        background-color : rgba(24, 24, 24, .9);
+        background : none;
         color:rgb(129, 129, 129);  
       }
 
@@ -57,24 +57,24 @@
         margin-right: 60px;
         background : none;
         font-size : 14px;
-        color :rgb(255, 255, 255);
+        color :rgb(140, 140, 140);
       }
 
       #pulseaudio.microphone {
         margin-right: 5px;
-        background-color : rgba(10, 10, 10, 1);
+        background-color : rgba(18, 18, 18, 0.7);
       }
       
       #pulseaudio {
-        background-color : rgba(10, 10, 10, 1);
+        background-color : rgba(18, 18, 18, 0.6);
       }
 
       #custom-date {
-        background-color : rgba(10, 10, 10, 1);
+        background-color : rgba(18, 18, 18, 0.5);
       }
 
       #custom-clock {
-        background-color : rgba(10, 10, 10, 1);
+        background-color : rgba(18, 18, 18, 0.4);
       }
 
       #custom-github,
@@ -86,7 +86,7 @@
         font-size : 1.5rem;
         padding-left : .5rem;
         padding-right : .5rem;
-        background-color : rgba(10, 10, 10, 1);
+        background-color : rgba(18, 18, 18, 0.3);
       }
  
       #custom-github {
@@ -114,43 +114,43 @@
 
       #custom-bgimage {   
         padding-left : 1rem;
-        background-color : rgba(10, 10, 10, 1);
+        background-color : rgba(18, 18, 18, 0.7);
         padding : .5rem;
       }
 
       #custom-nvidia {
-        background-color : rgba(10, 10, 10, 1) ;
+        background-color : rgba(18, 18, 18, 0.6) ;
       }
 
       #memory {
-        background-color : rgba(10, 10, 10, 1);
+        background-color : rgba(18, 18, 18, 0.5);
         border-radius : 4px 0 0 4px;
       }
 
       #custom-ram {
         margin-left : -1px;
-        background-color : rgba(10, 10, 10, 1);
+        background-color : rgba(18, 18, 18, 0.5);
         padding : .5rem;
         border-radius : 0 4px 4px 0;
       }
 
       #cpu {
-        background-color : rgba(10, 10, 10, 1);
+        background-color : rgba(18, 18, 18, 0.4);
         border-radius : 4px 0 0 4px;
       }
 
       #custom-cputemp {
-        background-color : rgba(10, 10, 10, 1);
+        background-color : rgba(18, 18, 18, 0.4);
         border-radius : 0 4px 4px 0;
       }
 
       #disk {
-        background-color : rgba(10, 10, 10, 1);
+        background-color : rgba(18, 18, 18, 0.3);
       }
 
       #custom-barTheme {
         padding-left : 1rem;
-        background-color : rgba(10, 10, 10, 1);
+        background-color : rgba(18, 18, 18, 0.2);
         padding-left : .5rem;
         padding-right : .5rem;
         font-size : 1.5rem;
@@ -311,7 +311,7 @@
     },
 
     "custom/bgimage": {
-      "format": "{}",
+      "format": "  {}",
       "exec" : "whoami",
       "exec-if" : "exit 0",
       "signal" : 8
