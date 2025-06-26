@@ -12,5 +12,6 @@
         superTux                            # Classic 2D jump'n run sidescroller game
         tor-browser                         # Privacy-focused browser routing traffic through the Tor network
         vscode                              # Open source source code editor developed by Microsoft for Windows, Linux and macOS 
+        wireshark                           # Powerful network protocol analyzer
     ];
 }

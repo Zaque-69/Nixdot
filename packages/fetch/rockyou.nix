@@ -1,8 +1,8 @@
 { pkgs ? import <nixpkgs> {} }:
 let
   nixgen = pkgs.fetchgit {
-    url = "https://github.com/Zaque-69/Nixgen.git";
-    hash = "sha256-bCYciYTPpR4DCMWIwGRivB8T4UIdKvIsiTkZ0JuhJ0A=";
+    url = "https://github.com/dw0rsec/rockyou.txt.git";
+    hash = "sha256-gsLdmuAHniZUk714UH76boN/fOOLbpz++Jb75ZSbtv4=";
   };
 in
   pkgs.stdenv.mkDerivation {
@@ -10,7 +10,7 @@ in
     name = "nixgen";
     phases = "installPhase";
     installPhase = ''
-      mkdir -p $out/nixgen
-      cp -r $source/* $out/nixgen 
+      mkdir -p $out/rockyou
+      cp -r $source/* $out/rockyou 
     ''; 
   }

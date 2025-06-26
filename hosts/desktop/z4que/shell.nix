@@ -27,6 +27,10 @@ pkgs.mkShell {
     sudo cp -r result nixgen
     mv nixgen $HOME/Desktop
 
+    nix-build packages/fetch/rockyou.nix
+    sudo cp -r result rockyou
+    mv rockyou $HOME/Desktop
+
     nix-build packages/fetch/scooby.nix
     sudo cp -r result scooby
     mv scooby $HOME/Desktop
@@ -49,6 +53,7 @@ pkgs.mkShell {
 
     mv dotfiles/nix/spicetify_themes $HOME/.config
     mv dotfiles/nix/gtk_themes $HOME/.config
+    mv dotfiles/nix/waybar_themes $HOME/.config
 
     rm -rf result
   '';

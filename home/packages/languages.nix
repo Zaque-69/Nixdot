@@ -8,6 +8,8 @@
         nim                                 # Nim language
         nimble                              # Package manager for the Nim programming language
         python313                           # Python language
+        python313Packages.pip               # PyPA recommended tool for installing Python packages
+        python313Packages.setuptools        # Utilities to facilitate the installation of Python packages
         yara                                # Bytes detector language
     ];
 }

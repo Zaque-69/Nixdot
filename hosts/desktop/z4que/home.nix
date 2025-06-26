@@ -8,10 +8,6 @@
     sops-nix.homeManagerModules.sops
   ];
 
-  gtk = {
-    enable = true;
-  };
-
   sops = {
     defaultSopsFile = ./secrets/secrets.yaml;
     defaultSopsFormat = "yaml";
