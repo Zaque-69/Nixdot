@@ -1,6 +1,5 @@
 { pkgs, ... } : {
     home.packages = with pkgs; [
-        hyprdim                             # Automatically dim windows in Hyprland when switching between them
         swaylock                            # Screen locker for Wayland
         waylock                             # A small screenlocker for Wayland compositors
         wl-clipboard                        # Command-line copy/paste utilities for Wayland

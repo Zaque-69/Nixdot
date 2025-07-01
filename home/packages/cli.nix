@@ -15,6 +15,7 @@
         lm_sensors                                  # Usage statistics
         neofetch                                    # A fast, highly customizable system info script
         nitch                                       # Simple PC presentation
+        npiet                                       # Interpreter for piet programs. Also includes npietedit and npiet-foogol
         nurl                                        # Generate Nix fetcher calls from repository URLs
         openssl                                     # Cryptographic library that implements the SSL and TLS protocols
         p7zip                                       # New p7zip fork with additional codecs and improvements (forked from https://sourceforge.net/projects/p7zip/)
