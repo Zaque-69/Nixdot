@@ -34,8 +34,13 @@
         sudo cp $HOME/Desktop/assets/backgrounds/blackbg/* $HOME/Desktop/hyprimage/hyprimage/backgrounds/ && 
         sudo cp $HOME/Desktop/assets/themes/blackbg/* $HOME/Desktop/hyprimage/hyprimage/themes && 
         cd /home/z4que/Desktop/hyprimage/hyprimage && python main.py -t 0 &&
+        pkill waybar
+        cp $HOME/.config/waybar_themes/themes/waybar3.nix $HOME/.config/waybar_themes/themes/waybar.nix && 
+        rm $HOME/.config/waybar_themes/waybar.nix && 
+        mv $HOME/.config/waybar_themes/themes/waybar.nix $HOME/.config/waybar_themes/ && 
         cd /home/z4que/Desktop/dot-unstable && 
-        home-manager switch --impure --flake .#z4que";
+        home-manager switch --impure --flake .#z4que && 
+        nohup waybar";
       "CLEAR" = "clear";
       "claer" = "clear";
       "clera" = "clear";
@@ -55,8 +60,13 @@
         sudo cp $HOME/Desktop/assets/backgrounds/dust&velvet/* $HOME/Desktop/hyprimage/hyprimage/backgrounds/ && 
         sudo cp $HOME/Desktop/assets/themes/dust&velvet/* $HOME/Desktop/hyprimage/hyprimage/themes && 
         cd /home/z4que/Desktop/hyprimage/hyprimage && python main.py -t 0 &&
+        pkill waybar
+        cp $HOME/.config/waybar_themes/themes/waybar2.nix $HOME/.config/waybar_themes/themes/waybar.nix && 
+        rm $HOME/.config/waybar_themes/waybar.nix && 
+        mv $HOME/.config/waybar_themes/themes/waybar.nix $HOME/.config/waybar_themes/ && 
         cd /home/z4que/Desktop/dot-unstable && 
-        home-manager switch --impure --flake .#z4que";
+        home-manager switch --impure --flake .#z4que &&
+        nohup waybar";
       "helix" = "$HOME/Desktop/helix/bin/hx";
       "hyprimage" = "cd /home/z4que/Desktop/hyprimage/hyprimage && python main.py -t";
       "lines" = "find . -type f -exec wc -l {} + | awk '{s+=$1} END {print s}'";
@@ -68,20 +78,6 @@
       "pdf" = "libreoffice --headless --convert-to pdf";
       "scooby" = "python $HOME/Desktop/scooby/scooby/main.py";
       "sl" = "ls";
-      "waybar1" = "pkill waybar
-        cp $HOME/.config/waybar_themes/themes/waybar1.nix $HOME/.config/waybar_themes/themes/waybar.nix && 
-        rm $HOME/.config/waybar_themes/waybar.nix && 
-        mv $HOME/.config/waybar_themes/themes/waybar.nix $HOME/.config/waybar_themes/ && 
-        cd /home/z4que/Desktop/dot-unstable && 
-        home-manager switch --impure --flake .#z4que &&
-        waybar";
-      "waybar2" = "pkill waybar
-        cp $HOME/.config/waybar_themes/themes/waybar2.nix $HOME/.config/waybar_themes/themes/waybar.nix && 
-        rm $HOME/.config/waybar_themes/waybar.nix && 
-        mv $HOME/.config/waybar_themes/themes/waybar.nix $HOME/.config/waybar_themes/ && 
-        cd /home/z4que/Desktop/dot-unstable && 
-        home-manager switch --impure --flake .#z4que && 
-        waybar";
       "zen" = "$HOME/Desktop/zen/bin/zen-bin"; 
       
     };

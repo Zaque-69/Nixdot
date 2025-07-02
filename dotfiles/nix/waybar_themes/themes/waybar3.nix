@@ -32,14 +32,16 @@
       #custom-reddit
 
       {
-        padding : 1px 12px;    
+        color : #fff;
+        background-color : #2d253a;
+        padding : 1.5px 10px;    
         margin: 2px ;
         margin-bottom : 1px;
-        font-size : .9rem;
       }
 
       window#waybar {
-        background-color : #1e2022;
+        background-color : rgba(16, 16, 16, 0.8);
+        color:rgb(129, 129, 129);  
       }
 
       #workspaces {
@@ -58,31 +60,21 @@
         color :rgb(255, 255, 255);
       }
 
-      #pulseaudio {
-        color : #CB94F0;
-        background-color :#1A1A22;
-        margin-right : -2px;
-        border-radius : 4px 0 0 4px;
-      }
-
       #pulseaudio.microphone {
         margin-right: 5px;
-        color : #1e1e2e;
-        background-color : #CB94F0;
-        border-radius : 0 4px 4px 0;
+        background-color : rgba(1, 1, 1, 1);
+      }
+      
+      #pulseaudio {
+        background-color : rgba(1, 1, 1, 1);
       }
 
       #custom-date {
-        color : #1e1e2e;
-        background-color : #E26E74;
-        border-radius : 0 4px 4px 0;
+        background-color : rgba(1, 1, 1, 1);
       }
 
       #custom-clock {
-        margin-right : -2px;
-        color : #E26E74;
-        background-color :#1A1A22;
-        border-radius : 4px 0 0 4px;
+        background-color : rgba(1, 1, 1, 1);
       }
 
       #custom-github,
@@ -94,7 +86,7 @@
         font-size : 1.5rem;
         padding-left : .5rem;
         padding-right : .5rem;
-        color : #fff;
+        background-color : rgba(1, 1, 1, 1);
       }
  
       #custom-github {
@@ -122,53 +114,46 @@
 
       #custom-user {   
         padding-left : 1rem;
-        color : #81B0EE;
-        background-color : #1A1A22;
+        background-color : rgba(1, 1, 1, 1);
         padding : .5rem;
       }
 
       #custom-nvidia {
-        color : #1A1A22;
-        background-color : #8CDECB;
+        background-color : rgba(1, 1, 1, 1) ;
       }
 
       #memory {
-        background-color : #1A1A22;
-        color : #8CDECB;
+        background-color : rgba(1, 1, 1, 1);
         border-radius : 4px 0 0 4px;
       }
 
       #custom-ram {
         margin-left : -2px;
-        color : #1A1A22;
-        background-color : #8CDECB;
+        background-color : rgba(1, 1, 1, 1);
         padding : .5rem;
         border-radius : 0 4px 4px 0;
       }
 
       #cpu {
-        background-color : #1A1A22;
+        background-color : rgba(1, 1, 1, 1);
         border-radius : 4px 0 0 4px;
-        color : #F3D496;
       }
 
       #custom-cputemp {
-        background-color : #F3D496;
-        color : #1A1A22;
+        background-color : rgba(1, 1, 1, 1);
         border-radius : 0 4px 4px 0;
       }
 
       #disk {
-        color : #F3D496;
-        background-color : #1A1A22;
+        background-color : rgba(1, 1, 1, 1);
       }
 
       #custom-recycle {
         padding-left : 1rem;
+        background-color : rgba(1, 1, 1, 1);
         padding-left : .5rem;
         padding-right : .5rem;
         font-size : 1.5rem;
-        color : #fff;
       }
       '';
   };
@@ -326,7 +311,7 @@
     },
 
     "custom/user": {
-      "format": "  {}",
+      "format": "{}",
       "exec" : "whoami",
       "exec-if" : "exit 0",
       "signal" : 8
