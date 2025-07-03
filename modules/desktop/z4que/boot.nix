@@ -1,5 +1,7 @@
 {
   boot = {
+    enableContainers = true;
+    hardwareScan = true;
     kernelModules = [ "nvidia" ];
     loader = {
       systemd-boot = {
@@ -8,8 +10,10 @@
       };
       timeout = 5;
     };
-    
     tmp.cleanOnBoot = true;
-    readOnlyNixStore = false;
-  }; 
+    nixStoreMountOpts = [
+      "nodev"
+      "nosuid"
+    ];
+  };
 }

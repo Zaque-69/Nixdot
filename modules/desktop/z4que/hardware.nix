@@ -11,7 +11,7 @@
 	        nvidiaSettings = true;
             package = config.boot.kernelPackages.nvidiaPackages.stable;
         };
-        opengl.enable = true;
+        graphics.enable = true;
     }; 
 
     environment.systemPackages = with pkgs; [

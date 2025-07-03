@@ -5,72 +5,77 @@
   programs.fish = {
     enable = true;
     shellAbbrs = {
-      "aot" = "cp $HOME/.config/spicetify_themes/themes/spicetify_aot.nix $HOME/.config/spicetify_themes/themes/spicetify.nix && 
-        rm $HOME/.config/spicetify_themes/spicetify.nix && 
-        mv $HOME/.config/spicetify_themes/themes/spicetify.nix $HOME/.config/spicetify_themes/ && 
-        cp $HOME/.config/gtk_themes/themes/gtk_aot.nix $HOME/.config/gtk_themes/themes/gtk.nix && 
-        rm $HOME/.config/gtk_themes/gtk.nix && 
-        mv $HOME/.config/gtk_themes/themes/gtk.nix $HOME/.config/gtk_themes/ && 
-        sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/backgrounds/ &&
-        sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/themes/ &&
-        sudo mkdir $HOME/Desktop/hyprimage/hyprimage/backgrounds &&
-        sudo mkdir $HOME/Desktop/hyprimage/hyprimage/themes &&
-        sudo cp $HOME/Desktop/assets/backgrounds/aot/* $HOME/Desktop/hyprimage/hyprimage/backgrounds/ && 
-        sudo cp $HOME/Desktop/assets/themes/aot/* $HOME/Desktop/hyprimage/hyprimage/themes && 
-        cd /home/z4que/Desktop/hyprimage/hyprimage && python main.py -t 0 &&
-        cd /home/z4que/Desktop/dot-unstable && 
-        home-manager switch --impure --flake .#z4que";
+      "aot" = "cp $HOME/.config/spicetify_themes/themes/spicetify_aot.nix $HOME/.config/spicetify_themes/themes/spicetify.nix  
+        rm $HOME/.config/spicetify_themes/spicetify.nix  
+        mv $HOME/.config/spicetify_themes/themes/spicetify.nix $HOME/.config/spicetify_themes/  
+        cp $HOME/.config/gtk_themes/themes/gtk_aot.nix $HOME/.config/gtk_themes/themes/gtk.nix  
+        rm $HOME/.config/gtk_themes/gtk.nix  
+        mv $HOME/.config/gtk_themes/themes/gtk.nix $HOME/.config/gtk_themes/  
+        sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/backgrounds/ 
+        sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/themes/ 
+        sudo mkdir $HOME/Desktop/hyprimage/hyprimage/backgrounds 
+        sudo mkdir $HOME/Desktop/hyprimage/hyprimage/themes 
+        sudo cp $HOME/Desktop/assets/backgrounds/aot/* $HOME/Desktop/hyprimage/hyprimage/backgrounds/  
+        sudo cp $HOME/Desktop/assets/themes/aot/* $HOME/Desktop/hyprimage/hyprimage/themes  
+        cd /home/z4que/Desktop/hyprimage/hyprimage && python main.py -t 0 
+        pkill waybar 
+        cp $HOME/.config/waybar_themes/themes/waybar1.nix $HOME/.config/waybar_themes/themes/waybar.nix  
+        rm $HOME/.config/waybar_themes/waybar.nix  
+        mv $HOME/.config/waybar_themes/themes/waybar.nix $HOME/.config/waybar_themes/  
+        cd /home/z4que/Desktop/dot-unstable  
+        home-manager switch --impure --flake .#z4que 
+        setsid waybar";
       "bcrypt" = "$HOME/Desktop/bcrypt/bcrypt-tool";
-      "blackbg" = "cp $HOME/.config/spicetify_themes/themes/spicetify_blackbg.nix $HOME/.config/spicetify_themes/themes/spicetify.nix && 
-        rm $HOME/.config/spicetify_themes/spicetify.nix && 
-        mv $HOME/.config/spicetify_themes/themes/spicetify.nix $HOME/.config/spicetify_themes/ && 
-        cp $HOME/.config/gtk_themes/themes/gtk_blackbg.nix $HOME/.config/gtk_themes/themes/gtk.nix && 
-        rm $HOME/.config/gtk_themes/gtk.nix && 
-        mv $HOME/.config/gtk_themes/themes/gtk.nix $HOME/.config/gtk_themes/ && 
-        sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/backgrounds/ &&
-        sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/themes/ &&
-        sudo mkdir $HOME/Desktop/hyprimage/hyprimage/backgrounds &&
-        sudo mkdir $HOME/Desktop/hyprimage/hyprimage/themes &&
-        sudo cp $HOME/Desktop/assets/backgrounds/blackbg/* $HOME/Desktop/hyprimage/hyprimage/backgrounds/ && 
-        sudo cp $HOME/Desktop/assets/themes/blackbg/* $HOME/Desktop/hyprimage/hyprimage/themes && 
-        cd /home/z4que/Desktop/hyprimage/hyprimage && python main.py -t 0 &&
-        pkill waybar
-        cp $HOME/.config/waybar_themes/themes/waybar3.nix $HOME/.config/waybar_themes/themes/waybar.nix && 
-        rm $HOME/.config/waybar_themes/waybar.nix && 
-        mv $HOME/.config/waybar_themes/themes/waybar.nix $HOME/.config/waybar_themes/ && 
-        cd /home/z4que/Desktop/dot-unstable && 
-        home-manager switch --impure --flake .#z4que && 
-        nohup waybar";
+      "blackbg" = "cp $HOME/.config/spicetify_themes/themes/spicetify_blackbg.nix $HOME/.config/spicetify_themes/themes/spicetify.nix 
+        rm $HOME/.config/spicetify_themes/spicetify.nix 
+        mv $HOME/.config/spicetify_themes/themes/spicetify.nix $HOME/.config/spicetify_themes/ 
+        cp $HOME/.config/gtk_themes/themes/gtk_blackbg.nix $HOME/.config/gtk_themes/themes/gtk.nix 
+        rm $HOME/.config/gtk_themes/gtk.nix
+        mv $HOME/.config/gtk_themes/themes/gtk.nix $HOME/.config/gtk_themes/ 
+        sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/backgrounds/ 
+        sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/themes/
+        sudo mkdir $HOME/Desktop/hyprimage/hyprimage/backgrounds 
+        sudo mkdir $HOME/Desktop/hyprimage/hyprimage/themes 
+        sudo cp $HOME/Desktop/assets/backgrounds/blackbg/* $HOME/Desktop/hyprimage/hyprimage/backgrounds/ 
+        sudo cp $HOME/Desktop/assets/themes/blackbg/* $HOME/Desktop/hyprimage/hyprimage/themes 
+        cd /home/z4que/Desktop/hyprimage/hyprimage && python main.py -t 0 
+        pkill waybar 
+        cp $HOME/.config/waybar_themes/themes/waybar3.nix $HOME/.config/waybar_themes/themes/waybar.nix 
+        rm $HOME/.config/waybar_themes/waybar.nix 
+        mv $HOME/.config/waybar_themes/themes/waybar.nix $HOME/.config/waybar_themes/ 
+        cd /home/z4que/Desktop/dot-unstable 
+        home-manager switch --impure --flake .#z4que 
+        setsid waybar";
       "CLEAR" = "clear";
       "claer" = "clear";
       "clera" = "clear";
       "cls" = "clear";
       "code" = "code --ozone-platform-hint . .";
       "dc" = "cd";
-      "dust&velvet" = "cp $HOME/.config/spicetify_themes/themes/spicetify_dust&velvet.nix $HOME/.config/spicetify_themes/themes/spicetify.nix && 
-        rm $HOME/.config/spicetify_themes/spicetify.nix && 
-        mv $HOME/.config/spicetify_themes/themes/spicetify.nix $HOME/.config/spicetify_themes/ && 
-        cp $HOME/.config/gtk_themes/themes/gtk_dust&velvet.nix $HOME/.config/gtk_themes/themes/gtk.nix && 
-        rm $HOME/.config/gtk_themes/gtk.nix && 
-        mv $HOME/.config/gtk_themes/themes/gtk.nix $HOME/.config/gtk_themes/ && 
-        sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/backgrounds/ &&
-        sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/themes/ &&
-        sudo mkdir $HOME/Desktop/hyprimage/hyprimage/backgrounds &&
-        sudo mkdir $HOME/Desktop/hyprimage/hyprimage/themes &&
-        sudo cp $HOME/Desktop/assets/backgrounds/dust&velvet/* $HOME/Desktop/hyprimage/hyprimage/backgrounds/ && 
-        sudo cp $HOME/Desktop/assets/themes/dust&velvet/* $HOME/Desktop/hyprimage/hyprimage/themes && 
-        cd /home/z4que/Desktop/hyprimage/hyprimage && python main.py -t 0 &&
-        pkill waybar
-        cp $HOME/.config/waybar_themes/themes/waybar2.nix $HOME/.config/waybar_themes/themes/waybar.nix && 
-        rm $HOME/.config/waybar_themes/waybar.nix && 
-        mv $HOME/.config/waybar_themes/themes/waybar.nix $HOME/.config/waybar_themes/ && 
-        cd /home/z4que/Desktop/dot-unstable && 
-        home-manager switch --impure --flake .#z4que &&
+      "dust&velvet" = "cp $HOME/.config/spicetify_themes/themes/spicetify_dust&velvet.nix $HOME/.config/spicetify_themes/themes/spicetify.nix  
+        rm $HOME/.config/spicetify_themes/spicetify.nix  
+        mv $HOME/.config/spicetify_themes/themes/spicetify.nix $HOME/.config/spicetify_themes/  
+        cp $HOME/.config/gtk_themes/themes/gtk_dust&velvet.nix $HOME/.config/gtk_themes/themes/gtk.nix  
+        rm $HOME/.config/gtk_themes/gtk.nix  
+        mv $HOME/.config/gtk_themes/themes/gtk.nix $HOME/.config/gtk_themes/  
+        sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/backgrounds/ 
+        sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/themes/ 
+        sudo mkdir $HOME/Desktop/hyprimage/hyprimage/backgrounds 
+        sudo mkdir $HOME/Desktop/hyprimage/hyprimage/themes 
+        sudo cp $HOME/Desktop/assets/backgrounds/dust&velvet/* $HOME/Desktop/hyprimage/hyprimage/backgrounds/  
+        sudo cp $HOME/Desktop/assets/themes/dust&velvet/* $HOME/Desktop/hyprimage/hyprimage/themes  
+        cd /home/z4que/Desktop/hyprimage/hyprimage && python main.py -t 0 
+        pkill waybar 
+        cp $HOME/.config/waybar_themes/themes/waybar2.nix $HOME/.config/waybar_themes/themes/waybar.nix  
+        rm $HOME/.config/waybar_themes/waybar.nix  
+        mv $HOME/.config/waybar_themes/themes/waybar.nix $HOME/.config/waybar_themes/  
+        cd /home/z4que/Desktop/dot-unstable  
+        home-manager switch --impure --flake .#z4que 
         nohup waybar";
       "helix" = "$HOME/Desktop/helix/bin/hx";
       "hyprimage" = "cd /home/z4que/Desktop/hyprimage/hyprimage && python main.py -t";
       "lines" = "find . -type f -exec wc -l {} + | awk '{s+=$1} END {print s}'";
-      "nixgen" = "python $HOME/Desktop/nixgen/nixgen/main.py &&
+      "nixgen" = "python $HOME/Desktop/nixgen/nixgen/main.py 
         nix-shell";
       "npu" = "nix-prefetch-url";
       "nvim" = "nix run $HOME/.config/nvim# --";

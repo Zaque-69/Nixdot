@@ -2,7 +2,7 @@
 let
   hyprimage = pkgs.fetchgit {
     url = "https://github.com/Zaque-69/Hyprimage.git";
-    hash = "sha256-eiHrw/rcJWcZjYtIyCe9XSs9jg5iLeDTCccRoXjrPl0=";
+    hash = "sha256-cqYtoRwRFYVmQW8UhqMoxsmsky5h+tPpyw80VjepX8c=";
   };
 in
   pkgs.stdenv.mkDerivation {

@@ -1,10 +1,13 @@
 { pkgs, ... } : {
-    services.xserver = {
+    services = {
         displayManager.sddm.wayland.enable = true;
-        videoDrivers = ["nvidia"];
-        xkb = {
-            options = "grp:win_space_toogle";
-            layout = "us,ro";
+        xserver = {
+            videoDrivers = ["nvidia"];
+            xkb = {
+                options = "grp:win_space_toogle";
+                layout = "us,ro";
+            };
         };
     };
 } 
+

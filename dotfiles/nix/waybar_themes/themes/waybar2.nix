@@ -40,6 +40,7 @@
 
       window#waybar {
         background-color : #1e2022;
+        border-radius : 0;
       }
 
       #workspaces {
