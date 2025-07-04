@@ -16,12 +16,12 @@
             geany                               # Simple text editor ( equivalent of Notepad++ )  
             git                                 # Distributed version control system
             kitty                               # A modern, hackable, featureful, OpenGL based terminal emulator
+            libsForQt5.sddm                     # QML based X11 display manager
             libsForQt5.qt5ct                    # Qt5 Configuration Tool
             libsForQt5.qt5.qtquickcontrols2     # Cross-platform application framework for C++
             libsForQt5.qt5.qtgraphicaleffects   # Cross-platform application framework for C++
             pamixer                             # Pulseaudio command line mixer
             qimgv                               # A Qt5 image viewer with optional video support
-            kdePackages.sddm                    # QML based X11 display manager
             unzip                               # An extraction utility for archives compressed in .zip format
             vlc                                 # Cross-platform media player and streaming server
             wayland                             # Wayland C++ binding
