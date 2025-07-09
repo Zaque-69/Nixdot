@@ -28,4 +28,5 @@
     homeDirectory = "/home/z4que";
     stateVersion = "25.05";
   };
+
 }

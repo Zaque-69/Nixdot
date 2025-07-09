@@ -23,7 +23,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland.url = "github:hyprwm/Hyprland?submodules=1";
+    hyprland.url = "github:hyprwm/Hyprland";
+    
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
 
     nixpkgs = {
       url = "nixpkgs/nixos-unstable";
@@ -74,7 +79,7 @@
         z4que = nixpkgs.lib.nixosSystem {
           modules = [ 
             home-manager.nixosModules.home-manager 
-            ./hosts/desktop/z4que/configuration.nix  
+            ./hosts/desktop/z4que/configuration.nix 
           ];
         };
 
