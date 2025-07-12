@@ -17,7 +17,7 @@ This repo contains more configurations, for different devices. Is not recommande
    && mv hardware-configuration.nix hosts/{device}/{username} 
    && nixos-install --flake .#device
    ```
-z
+
 ## Rebuild the system ( If you already have installed a Desktop/Window manager )
    ```bash
    nixos-rebuild switch --flake .#user
