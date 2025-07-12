@@ -58,15 +58,15 @@
         "col.inactive_border" = "rgba(BABBBDaa)";
         resize_on_border = false;
         allow_tearing = false;
-        layout = "dwindle";
+        layout = "hy3";
       };
 
       animations = {
         enabled = true;
-        bezier = "myBezier, 0.05, 1.1, 0.2, 1.0";
+        bezier = "myBezier, 0.05, 1.1, 0.2, 1";
         animation = [
           "windows, 1, 7, myBezier"
-          "windowsOut, 1, 7, default, popin 90%"
+          "windowsOut, 1, 5, default, popin 95%"
           "border, 1, 10, default"
           "borderangle, 1, 8, default"
           "fade, 1, 7, default"
@@ -102,11 +102,7 @@
         "$mainMod, R, exec, wofi --show drun"
         "$mainMod, P, pseudo,"
         "$mainMod, J, togglesplit,"
-
-        "$mainMod, left, movefocus, l"
-        "$mainMod, right, movefocus, r"
-        "$mainMod, up, movefocus, u"
-        "$mainMod, down, movefocus, d"
+        "$mainMod, g, hyprexpo:expo, toggle"
 
         "$mainMod, 1, workspace, 1"
         "$mainMod, 2, workspace, 2"
@@ -151,7 +147,12 @@
 
       windowrulev2 = "suppressevent maximize, class:.*";
 
-      plugin = "/nix/store/frg3q6kjnsfqaixmidnq7i144nb6dkcq-hyprfocus-0.1/lib/libhyprfocus.so";
+      plugins = [
+        "/nix/store/frg3q6kjnsfqaixmidnq7i144nb6dkcq-hyprfocus-0.1/lib/libhyprfocus.so"
+        "/nix/store/009j450sfin2sxpicdc8zs0a98rwk542-hyprexpo-0.1/lib/libhyprexpo.so"
+        "/nix/store/9p1zbys6nz5zfd41gyp8q3lix776nzwx-hyprtrails-0.1/lib/libhyprtrails.so"
+        "/nix/store/lzl45vbcdrvh6h0vd86fnisb9q6v817x-borders-plus-plus-0.1/lib/libborders-plus-plus.so"
+      ];
 
       "plugin:hyprfocus" = {
         enabled = "yes";
@@ -163,19 +164,38 @@
           ];
 
           flash = {
-            flash_opacity = "0.95";
+            flash_opacity = "0.98";
 
             in_bezier = "bezIn";
             in_speed = "0.1";
 
             out_bezier = "bezOut";
             out_speed = "0.1";
-          };
+        };
       };
     };
 
     plugins = [
       inputs.hyprland-plugins.packages.${pkgs.system}.hyprfocus
+      inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
+      inputs.hyprland-plugins.packages.${pkgs.system}.hyprtrails
+      inputs.hyprland-plugins.packages.${pkgs.system}.borders-plus-plus
     ];
+
+    extraConfig = ''
+      plugin {
+        hyprtrails {
+            color = rgba(feffeff0)
+          }
+      }
+
+      plugin {
+        borders-plus-plus {
+            col.border_1 = rgb(2f2f2f)
+            border_size_1 = 2
+            natural_rounding = yes
+        }
+    }
+    '';
   };
 }
