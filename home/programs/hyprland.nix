@@ -102,7 +102,6 @@
         "$mainMod, R, exec, wofi --show drun"
         "$mainMod, P, pseudo,"
         "$mainMod, J, togglesplit,"
-        "$mainMod, g, hyprexpo:expo, toggle"
 
         "$mainMod, 1, workspace, 1"
         "$mainMod, 2, workspace, 2"
@@ -149,9 +148,6 @@
 
       plugins = [
         "/nix/store/frg3q6kjnsfqaixmidnq7i144nb6dkcq-hyprfocus-0.1/lib/libhyprfocus.so"
-        "/nix/store/009j450sfin2sxpicdc8zs0a98rwk542-hyprexpo-0.1/lib/libhyprexpo.so"
-        "/nix/store/9p1zbys6nz5zfd41gyp8q3lix776nzwx-hyprtrails-0.1/lib/libhyprtrails.so"
-        "/nix/store/lzl45vbcdrvh6h0vd86fnisb9q6v817x-borders-plus-plus-0.1/lib/libborders-plus-plus.so"
       ];
 
       "plugin:hyprfocus" = {
@@ -177,25 +173,6 @@
 
     plugins = [
       inputs.hyprland-plugins.packages.${pkgs.system}.hyprfocus
-      inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
-      inputs.hyprland-plugins.packages.${pkgs.system}.hyprtrails
-      inputs.hyprland-plugins.packages.${pkgs.system}.borders-plus-plus
     ];
-
-    extraConfig = ''
-      plugin {
-        hyprtrails {
-            color = rgba(feffeff0)
-          }
-      }
-
-      plugin {
-        borders-plus-plus {
-            col.border_1 = rgb(2f2f2f)
-            border_size_1 = 2
-            natural_rounding = yes
-        }
-    }
-    '';
   };
 }
