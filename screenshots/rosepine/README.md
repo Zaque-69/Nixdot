@@ -1,6 +1,6 @@
 ## Commands 
 ```bash
-blackbg
+rosepine
 ```
 
 Now just type the root password, and use the command : 
@@ -16,25 +16,25 @@ From the configuration. In this example :
 ## Screenshots 
 
 <p align = "center">
-  <img width="800" alt="webui" src="assets/readme/200.png">
+  <img width="800" alt="webui" src="assets/readme/300.png">
 </p>
 
 <p align = "center">
-  <img width="800" alt="webui" src="assets/readme/201.png">
+  <img width="800" alt="webui" src="assets/readme/301.png">
 </p>
 
 <p align = "center">
-  <img width="800" alt="webui" src="assets/readme/202.png">
+  <img width="800" alt="webui" src="assets/readme/302.png">
 </p>
 
 <p align = "center">
-  <img width="800" alt="webui" src="assets/readme/203.png">
+  <img width="800" alt="webui" src="assets/readme/303.png">
 </p>
 
 <p align = "center">
-  <img width="800" alt="webui" src="assets/readme/204.png">
+  <img width="800" alt="webui" src="assets/readme/304.png">
 </p>
 
 <p align = "center">
-  <img width="800" alt="webui" src="assets/readme/205.png">
+  <img width="800" alt="webui" src="assets/readme/305.png">
 </p>

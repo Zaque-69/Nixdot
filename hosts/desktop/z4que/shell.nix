@@ -45,11 +45,13 @@ pkgs.mkShell {
     sudo mv assets/backgrounds/aot $HOME/Desktop/assets/backgrounds
     sudo mv assets/backgrounds/dust&velvet $HOME/Desktop/assets/backgrounds
     sudo mv assets/backgrounds/blackbg $HOME/Desktop/assets/backgrounds
+    sudo mv assets/backgrounds/rosepine $HOME/Desktop/assets/backgrounds
 
     mkdir $HOME/Desktop/assets/themes
     sudo mv assets/themes/aot $HOME/Desktop/assets/themes
     sudo mv assets/themes/dust&velvet $HOME/Desktop/themes
     sudo mv assets/themes/blackbg $HOME/Desktop/themes
+    sudo mv assets/themes/rosepine $HOME/Desktop/themes
 
     mv dotfiles/nix/spicetify_themes $HOME/.config
     mv dotfiles/nix/gtk_themes $HOME/.config

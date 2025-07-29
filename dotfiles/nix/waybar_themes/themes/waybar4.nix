@@ -39,7 +39,7 @@
       }
 
       window#waybar {
-        background-color : #1e2022;
+        background-color : #181624;
         border-radius : 0;
       }
 
@@ -60,7 +60,7 @@
       }
 
       #pulseaudio {
-        color : #CB94F0;
+        color : #e0d5ff;
         background-color :#1A1A22;
         margin-right : -2px;
         border-radius : 4px 0 0 4px;
@@ -69,19 +69,19 @@
       #pulseaudio.microphone {
         margin-right: 5px;
         color : #1e1e2e;
-        background-color : #CB94F0;
+        background-color : #e0d5ff;
         border-radius : 0 4px 4px 0;
       }
 
       #custom-date {
         color : #1e1e2e;
-        background-color : #E26E74;
+        background-color : #CB94F0;
         border-radius : 0 4px 4px 0;
       }
 
       #custom-clock {
         margin-right : -2px;
-        color : #E26E74;
+        color : #CB94F0;
         background-color :#1A1A22;
         border-radius : 4px 0 0 4px;
       }
@@ -123,26 +123,26 @@
 
       #custom-user {   
         padding-left : 1rem;
-        color : #81B0EE;
+        color : #605599;
         background-color : #1A1A22;
         padding : .5rem;
       }
 
       #custom-nvidia {
         color : #1A1A22;
-        background-color : #8CDECB;
+        background-color : #8075b9;
       }
 
       #memory {
         background-color : #1A1A22;
-        color : #8CDECB;
+        color : #8075b9;
         border-radius : 4px 0 0 4px;
       }
 
       #custom-ram {
         margin-left : -2px;
         color : #1A1A22;
-        background-color : #8CDECB;
+        background-color : #8075b9;
         padding : .5rem;
         border-radius : 0 4px 4px 0;
       }
@@ -150,17 +150,17 @@
       #cpu {
         background-color : #1A1A22;
         border-radius : 4px 0 0 4px;
-        color : #F3D496;
+        color : #c0b5f9;
       }
 
       #custom-cputemp {
-        background-color : #F3D496;
+        background-color : #D3ADF6;
         color : #1A1A22;
         border-radius : 0 4px 4px 0;
       }
 
       #disk {
-        color : #F3D496;
+        color : #D3ADF6;
         background-color : #1A1A22;
       }
 

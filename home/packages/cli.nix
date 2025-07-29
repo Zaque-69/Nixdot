@@ -21,6 +21,7 @@
         p7zip                                       # New p7zip fork with additional codecs and improvements (forked from https://sourceforge.net/projects/p7zip/)
         pngcheck                                    # Verifies the integrity of PNG, JNG and MNG files
         pngcrush                                    # PNG optimizer
+        sherlock                                    # Hunt down social media accounts by username across social networks
         sops                                        # Passwords ecryptor
         steghide                                    # Open source steganography program
         strace                                      # A system call tracer for Linux

@@ -80,7 +80,27 @@
       "npu" = "nix-prefetch-url";
       "nvim" = "nix run $HOME/.config/nvim# --";
       "passwords" = "sops $HOME/.config/secrets/secrets.yaml";
-      "pdf" = "libreoffice --headless --convert-to pdf";
+      "pdf" = "libreoffice --convert-to pdf";
+      "rosepine" = "cp $HOME/.config/spicetify_themes/themes/spicetify_rosepine.nix $HOME/.config/spicetify_themes/themes/spicetify.nix  
+        rm $HOME/.config/spicetify_themes/spicetify.nix  
+        mv $HOME/.config/spicetify_themes/themes/spicetify.nix $HOME/.config/spicetify_themes/  
+        cp $HOME/.config/gtk_themes/themes/gtk_rosepine.nix $HOME/.config/gtk_themes/themes/gtk.nix  
+        rm $HOME/.config/gtk_themes/gtk.nix  
+        mv $HOME/.config/gtk_themes/themes/gtk.nix $HOME/.config/gtk_themes/  
+        sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/backgrounds/ 
+        sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/themes/ 
+        sudo mkdir $HOME/Desktop/hyprimage/hyprimage/backgrounds 
+        sudo mkdir $HOME/Desktop/hyprimage/hyprimage/themes 
+        sudo cp $HOME/Desktop/assets/backgrounds/rosepine/* $HOME/Desktop/hyprimage/hyprimage/backgrounds/  
+        sudo cp $HOME/Desktop/assets/themes/rosepine/* $HOME/Desktop/hyprimage/hyprimage/themes  
+        cd /home/z4que/Desktop/hyprimage/hyprimage && python main.py -t 0 
+        pkill waybar 
+        cp $HOME/.config/waybar_themes/themes/waybar4.nix $HOME/.config/waybar_themes/themes/waybar.nix  
+        rm $HOME/.config/waybar_themes/waybar.nix  
+        mv $HOME/.config/waybar_themes/themes/waybar.nix $HOME/.config/waybar_themes/  
+        cd /home/z4que/Desktop/dot-unstable  
+        home-manager switch --impure --flake .#z4que 
+        nohup waybar";
       "scooby" = "python $HOME/Desktop/scooby/scooby/main.py";
       "sl" = "ls";
       "zen" = "$HOME/Desktop/zen/bin/zen-bin"; 

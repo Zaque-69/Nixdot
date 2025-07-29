@@ -5,7 +5,7 @@
       package = inputs.hyprland.packages.${pkgs.system}.default;
       settings = {
 
-      monitor = "DP-2, 1920x1080@165, 0x0,1";
+      monitor = "DP-1, 1920x1080@165, 0x0,1";
 
           "$mainMod" = "SUPER";
           "$terminal" = "kitty";
@@ -148,6 +148,7 @@
 
       plugins = [
         "/nix/store/frg3q6kjnsfqaixmidnq7i144nb6dkcq-hyprfocus-0.1/lib/libhyprfocus.so"
+
       ];
 
       "plugin:hyprfocus" = {
@@ -173,6 +174,7 @@
 
     plugins = [
       inputs.hyprland-plugins.packages.${pkgs.system}.hyprfocus
+
     ];
   };
 }

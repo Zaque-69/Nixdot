@@ -21,5 +21,8 @@ in
     enabledSnippets = with spicePkgs.snippets; [
       pointer
     ];
+
+    theme = spicePkgs.themes.sleek;
+    colorScheme = "RosePine";
   };
 }
