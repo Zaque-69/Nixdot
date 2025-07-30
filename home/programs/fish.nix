@@ -46,6 +46,26 @@
         cd /home/z4que/Desktop/dot-unstable 
         home-manager switch --impure --flake .#z4que 
         setsid waybar";
+      "cappuccinspace" = "cp $HOME/.config/spicetify_themes/themes/spicetify_cappuccinspace.nix $HOME/.config/spicetify_themes/themes/spicetify.nix 
+        rm $HOME/.config/spicetify_themes/spicetify.nix 
+        mv $HOME/.config/spicetify_themes/themes/spicetify.nix $HOME/.config/spicetify_themes/ 
+        cp $HOME/.config/gtk_themes/themes/gtk_cappuccinspace.nix $HOME/.config/gtk_themes/themes/gtk.nix 
+        rm $HOME/.config/gtk_themes/gtk.nix
+        mv $HOME/.config/gtk_themes/themes/gtk.nix $HOME/.config/gtk_themes/ 
+        sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/backgrounds/ 
+        sudo rm -rf $HOME/Desktop/hyprimage/hyprimage/themes/
+        sudo mkdir $HOME/Desktop/hyprimage/hyprimage/backgrounds 
+        sudo mkdir $HOME/Desktop/hyprimage/hyprimage/themes 
+        sudo cp $HOME/Desktop/assets/backgrounds/cappuccinspace/* $HOME/Desktop/hyprimage/hyprimage/backgrounds/ 
+        sudo cp $HOME/Desktop/assets/themes/cappuccinspace/* $HOME/Desktop/hyprimage/hyprimage/themes 
+        cd /home/z4que/Desktop/hyprimage/hyprimage && python main.py -t 0 
+        pkill waybar 
+        cp $HOME/.config/waybar_themes/themes/waybar5.nix $HOME/.config/waybar_themes/themes/waybar.nix 
+        rm $HOME/.config/waybar_themes/waybar.nix 
+        mv $HOME/.config/waybar_themes/themes/waybar.nix $HOME/.config/waybar_themes/ 
+        cd /home/z4que/Desktop/dot-unstable 
+        home-manager switch --impure --flake .#z4que 
+        setsid waybar";
       "CLEAR" = "clear";
       "claer" = "clear";
       "clera" = "clear";

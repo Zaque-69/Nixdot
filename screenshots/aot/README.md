@@ -16,12 +16,6 @@ From the configuration. In this example :
 ## Screenshots 
 
 <p align = "center">
-  <img width="800" alt="webui" src="assets/readme/nix.gif">
-</p>
-
-# First theme on desktop 
-
-<p align = "center">
   <img width="800" alt="webui" src="/assets/readme/1.png">
 </p>
 

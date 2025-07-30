@@ -1,6 +1,6 @@
 ## Commands 
 ```bash
-rosepine
+cappuccinspace
 ```
 
 Now just type the root password, and use the command : 
@@ -16,25 +16,29 @@ From the configuration. In this example :
 ## Screenshots 
 
 <p align = "center">
-  <img width="800" alt="webui" src="/assets/readme/300.png">
+  <img width="800" alt="webui" src="/assets/readme/400.png">
 </p>
 
 <p align = "center">
-  <img width="800" alt="webui" src="/assets/readme/301.png">
+  <img width="800" alt="webui" src="/assets/readme/401.png">
 </p>
 
 <p align = "center">
-  <img width="800" alt="webui" src="/assets/readme/302.png">
+  <img width="800" alt="webui" src="/assets/readme/402.png">
 </p>
 
 <p align = "center">
-  <img width="800" alt="webui" src="/assets/readme/303.png">
+  <img width="800" alt="webui" src="/assets/readme/403.png">
 </p>
 
 <p align = "center">
-  <img width="800" alt="webui" src="/assets/readme/304.png">
+  <img width="800" alt="webui" src="/assets/readme/404.png">
 </p>
 
 <p align = "center">
-  <img width="800" alt="webui" src="/assets/readme/305.png">
+  <img width="800" alt="webui" src="/assets/readme/405.png">
+</p>
+
+<p align = "center">
+  <img width="800" alt="webui" src="/assets/readme/406.png">
 </p>

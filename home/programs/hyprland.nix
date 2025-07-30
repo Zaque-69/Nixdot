@@ -102,6 +102,7 @@
         "$mainMod, R, exec, wofi --show drun"
         "$mainMod, P, pseudo,"
         "$mainMod, J, togglesplit,"
+        "$mainMod, g, hyprexpo:expo, toggle"
 
         "$mainMod, 1, workspace, 1"
         "$mainMod, 2, workspace, 2"
@@ -146,11 +147,6 @@
 
       windowrulev2 = "suppressevent maximize, class:.*";
 
-      plugins = [
-        "/nix/store/frg3q6kjnsfqaixmidnq7i144nb6dkcq-hyprfocus-0.1/lib/libhyprfocus.so"
-
-      ];
-
       "plugin:hyprfocus" = {
         enabled = "yes";
         mouse_focus_animation = "flash";
@@ -174,7 +170,25 @@
 
     plugins = [
       inputs.hyprland-plugins.packages.${pkgs.system}.hyprfocus
-
+      inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
+      inputs.hyprland-plugins.packages.${pkgs.system}.hyprtrails
+      inputs.hyprland-plugins.packages.${pkgs.system}.borders-plus-plus
     ];
+
+    extraConfig = ''
+      plugin {
+        hyprtrails {
+            color = rgba(feffeff0)
+          }
+      }
+
+      plugin {
+        borders-plus-plus {
+            col.border_1 = rgb(2f2f2f)
+            border_size_1 = 2
+            natural_rounding = yes
+        }
+    }
+    '';
   };
 }

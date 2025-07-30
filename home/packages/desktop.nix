@@ -1,6 +1,5 @@
 { pkgs, ... } : {
     home.packages = with pkgs; [
-        audacity                            # Sound editor with graphical UI
         eww                                 # A widget system made in Rust to create widgets for any WM
         filezilla                           # Graphical FTP, FTPS and SFTP client 
         gptfdisk                            # Disk viewer
