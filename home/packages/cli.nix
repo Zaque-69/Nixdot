@@ -1,6 +1,5 @@
 { pkgs, ... } : {
     home.packages = with pkgs; [
-        autopsy                                     # Graphical interface to The Sleuth Kit and other open source digital forensics tools
         aircrack-ng                                 # WiFi security auditing tools suite         
         bettercap                                   # Man in the middle tool1
         binwalk                                     # Firmware Analysis Tool

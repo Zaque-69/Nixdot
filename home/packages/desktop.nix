@@ -7,7 +7,6 @@
         grim                                # Grab images from a Wayland compositor
         gtk4                                # A multi-platform toolkit for creating graphical user interfaces
         libreoffice                         # Free Windows versions of softwares ( Excel, Powerpoint, ... )
-        notepadqq                           # Notepad++-like editor for the Linux desktop
         obs-studio                          # Free and open source software for video recording and live streaming
         pinta                               # Drawing/editing program modeled after Paint.NET
         slurp                               # Select a region in a Wayland compositor
