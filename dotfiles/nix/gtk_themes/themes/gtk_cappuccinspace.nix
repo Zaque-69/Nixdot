@@ -8,7 +8,7 @@ gtk = {
     };
     font.name = "DejaVu";
     iconTheme = {
-      name = "Nordzy-purple-dark";
+      name = "Nordzy";
 	  package = pkgs.nordzy-icon-theme;
     };
     theme = {

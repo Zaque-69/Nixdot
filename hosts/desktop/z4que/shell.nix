@@ -58,6 +58,7 @@ pkgs.mkShell {
     mv dotfiles/nix/spicetify_themes $HOME/.config
     mv dotfiles/nix/gtk_themes $HOME/.config
     mv dotfiles/nix/waybar_themes $HOME/.config
+    mv dotfiles/ChromiumExtensions $HOME/Desktop
 
     rm -rf result
   '';

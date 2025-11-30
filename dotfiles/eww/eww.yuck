@@ -1,0 +1,294 @@
+;; **
+;; ** Widgets config for EWW
+;; ** Created by : @adi1090x
+;; **
+
+;; ** Variables ***********************************************************************
+
+;; Workspace vars
+(defpoll WMS :interval "1s" `wmctrl -d | grep '*' | cut -d ' ' -f13`)
+
+;; Time vars
+(defpoll TIME :interval "5s" `date +\"%I:%M %p\"`)
+(defpoll DATE :interval "5s" `date +\"%A, %B %d\"`)
+
+;; Weather vars
+(defpoll ICON :interval "15m" `./scripts/weather_info --icon`)
+(defpoll TEMP :interval "15m" `./scripts/weather_info --temp`)
+(defpoll HEX :interval "15m" `./scripts/weather_info --hex`)
+
+
+;; User
+(defvar IMAGE "images/profile.jpg")
+(defpoll USER :interval "10m" `whoami`)
+(defpoll PWD :interval "1s" `ifconfig | grep 'inet' | awk '{print $2}' | head -n 1`)
+(defpoll CPU :interval "1s" `grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {printf "%.2f%%", usage}'`)
+(defpoll RAM :interval "1s" `free | grep Mem | awk '{usage=$3/$2 * 100.0} END {printf "%.2f%%", usage}'`)
+(defpoll FAN :interval "1s" `sensors | grep 'fan' | grep -oE '[0-9]+ RPM'`)
+(defpoll STORAGE :interval "1m" `df / | grep / | awk '{usage=$3/$2*100} END {printf "%.2f%%", usage}'`)
+
+
+;; ** Widgets *************************************************************************
+
+;
+;; apps
+(defwidget apps [] 
+    (box :class "dockbox"
+        (box :orientation "h" :spacing 15 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+            (button :style "background-image: url('images/icons/apps/terminal.png');" :class "appicon" :onclick "scripts/apps.sh --kitty")
+            (button :style "background-image: url('images/icons/apps/firefox.png');" :class "appicon" :onclick "firefox https://firefox.com")
+            (button :style "background-image: url('images/icons/apps/files.png');" :class "appicon" :onclick "thunar /home/z4que")
+            (button :style "background-image: url('images/icons/apps/discord.png');" :class "appicon" :onclick "firefox https://discord.com")
+            (button :style "background-image: url('images/icons/apps/reddit.png');" :class "appicon" :onclick "firefox https://reddit.com")
+            (button :style "background-image: url('images/icons/apps/whatsapp.png');" :class "appicon" :onclick "firefox https://web.whatsapp.com/")
+            (button :style "background-image: url('images/icons/apps/email.png');" :class "appicon" :onclick "firefox https://mail.google.com/mail/u/0/?hl=fr#inbox")
+        )))
+
+;; volume
+(defwidget volume [] 
+    (box :class "dockbox"
+        (box :orientation "h" :spacing 10 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+            (button :style "background-image: url('images/icons/apps/sound.png');" :class "appicon-volume" :onclick "scripts/apps.sh --mute")
+            (button :style "background-image: url('images/icons/apps/volume-high.png');" :class "appicon-volume" :onclick "pamixer -i 3")
+            (button :style "background-image: url('images/icons/apps/volume-down.png');" :class "appicon-volume" :onclick "pamixer -d 3")
+        )))
+
+;; weather
+(defwidget weather [] 
+    (box :class "dockbox"
+        (box :class "clockbox" :orientation "v" :spacing 0 :valign "center" :halign "start" :space-evenly "false" :vexpand "false" :hexpand "false"
+            (label :class "date" :halign "center" :valign "center" :wrap "true" :limit-width 300 :text DATE)
+            (label :class "time" :halign "center" :valign "center" :wrap "true" :limit-width 300 :text TIME)
+            
+            )))
+
+;; system
+(defwidget system [] 
+    (box :class "dockbox"
+        (box :orientation "h" :spacing 16 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+            (button :onclick "sidedar/toggle_sidebar"
+                (box :orientation "h" :spacing 8 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+                    (box :style "background-image: url('${IMAGE}');" :class "face")
+                        (label :class "infotext root" :halign "start" :text USER)
+                        (label :class "infotext root" :halign "start" :text PWD))))))
+
+(defwidget cpu [] 
+    (box :class "dockbox"
+        (box :orientation "h" :spacing 16 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+            (button :onclick "sidedar/toggle_sidebar"
+                (box :orientation "h" :spacing 8 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+                    (box :style "background-image: url('images/icons/apps/cpu.png');" :class "hardware")
+                        (label :class "infotext cpu" :halign "start" :text CPU))))))
+
+(defwidget ram [] 
+    (box :class "dockbox"
+        (box :orientation "h" :spacing 16 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+            (button :onclick "sidedar/toggle_sidebar"
+                (box :orientation "h" :spacing 8 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+                    (box :style "background-image: url('images/icons/apps/ram.png');" :class "hardware")
+                        (label :class "infotext ram" :halign "start" :text RAM))))))
+
+(defwidget fan [] 
+    (box :class "dockbox"
+        (box :orientation "h" :spacing 16 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+            (button :onclick "sidedar/toggle_sidebar"
+                (box :orientation "h" :spacing 8 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+                    (box :style "background-image: url('images/icons/apps/fan.png');" :class "hardware")
+                        (label :class "infotext fan" :halign "start" :text FAN))))))
+
+(defwidget storage [] 
+    (box :class "dockbox"
+        (box :orientation "h" :spacing 16 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+            (button :onclick "sidedar/toggle_sidebar"
+                (box :orientation "h" :spacing 8 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+                    (box :style "background-image: url('images/icons/apps/db.png');" :class "hardware")
+                        (label :class "infotext storage" :halign "start" :text STORAGE ))))))
+
+(defwidget photo [] 
+    (box :class "dockbox"
+        (box :orientation "h" :spacing 10 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+            (button :style "background-image: url('images/icons/apps/photo.png');" :class "appicon-volume" :onclick "scripts/apps.sh --color")
+        )))
+
+(defwidget trash [] 
+    (box :class "dockbox"
+        (box :orientation "h" :spacing 10 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+            (button :style "background-image: url('images/icons/apps/trash.png');" :class "appicon-volume trash" :onclick "scripts/apps.sh --trash")
+        )))
+
+(defwidget up [] 
+    (box :class "dockbox"
+        (box :orientation "h" :spacing -5 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+            (button :style "background-image: url('images/icons/apps/up.png');" :class "arrows" :onclick "scripts/apps.sh --up")
+            (button :style "background-image: url('images/icons/apps/down.png');" :class "arrows" :onclick "scripts/apps.sh --down")		
+        )))
+
+(defwidget nix [] 
+    (box :class "dockbox"
+        (box :orientation "h" :spacing 10 :valign "center" :halign "center" :space-evenly "false" :vexpand "false" :hexpand "false"
+            (button :style "background-image: url('images/icons/apps/nix.png');" :class "nix" :onclick "scripts/apps.sh --wlogout")	
+        )))
+
+
+;; ** Windows *************************************************************************
+
+;; apps
+(defwindow apps
+           :monitor 0
+           :geometry (geometry :x "1385px"
+                               :y "10px"
+                               :width "350px"
+                               :height "40px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(apps))
+
+;; volume
+(defwindow volume
+           :monitor 0
+           :geometry (geometry :x "1745px"
+                               :y "60px"
+                               :width "160px"
+                               :height "41px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(volume))
+
+;; weather
+(defwindow weather
+           :monitor 0
+           :geometry (geometry :x "1745px"
+                               :y "10px"
+                               :width "160px"
+                               :height "41px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(weather))
+
+
+;; system
+(defwindow system
+           :monitor 0
+           :geometry (geometry :x "1385"
+                               :y "60px"
+                               :width "350px"
+                               :height "40px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(system))
+
+(defwindow cpu
+           :monitor 0
+           :geometry (geometry :x "90px"
+                               :y "10px"
+                               :width "100px"
+                               :height "40px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(cpu))
+
+(defwindow ram
+           :monitor 0
+           :geometry (geometry :x "320px"
+                               :y "10px"
+                               :width "100px"
+                               :height "40px"
+                               :anixchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(ram))
+
+(defwindow fan
+           :monitor 0
+           :geometry (geometry :x "200px"
+                               :y "10px"
+                               :width "110px"
+                               :height "40px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(fan))
+
+(defwindow storage
+           :monitor 0
+           :geometry (geometry :x "430px"
+                               :y "10px"
+                               :width "110px"
+                               :height "40px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(storage))
+
+(defwindow photo
+           :monitor 0
+           :geometry (geometry :x "550px"
+                               :y "10px"
+                               :width "40px"
+                               :height "40px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(photo))
+
+(defwindow nix
+           :monitor 0
+           :geometry (geometry :x "1280px"
+                               :y "10px"
+                               :width "93px"
+                               :height "93px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(nix))
+
+(defwindow trash
+           :monitor 0
+           :geometry (geometry :x "600px"
+                               :y "10px"
+                               :width "40px"
+                               :height "40px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(trash))
+
+(defwindow up
+           :monitor 0
+           :geometry (geometry :x "25px"
+                               :y "10px"
+                               :width "40px"
+                               :height "40px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "80px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+(up))
