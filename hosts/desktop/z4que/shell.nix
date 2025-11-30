@@ -35,6 +35,10 @@ pkgs.mkShell {
     sudo cp -r result scooby
     mv scooby $HOME/Desktop
 
+    nix-build packages/fetch/cyber.nix
+    sudo cp -r result cyber
+    mv cyber $HOME/Desktop
+
     nix-build packages/fetch/hyprimage.nix
     sudo cp -r result hyprimage
     mv hyprimage $HOME/Desktop

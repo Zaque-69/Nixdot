@@ -17,7 +17,7 @@
           "gammastep"
           "hypridle"
           "cd /home/z4que/Desktop/hyprimage/hyprimage && python main.py -t 2"
-          "firefox"
+          "chromium"
       ];
 
       env = [

@@ -123,6 +123,7 @@
         nohup waybar";
       "scooby" = "python $HOME/Desktop/scooby/scooby/main.py";
       "sl" = "ls";
+      "weather" = "curl https://wttr.in/";
       "zen" = "$HOME/Desktop/zen/bin/zen-bin"; 
       
     };

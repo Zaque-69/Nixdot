@@ -9,9 +9,11 @@
         libreoffice                         # Free Windows versions of softwares ( Excel, Powerpoint, ... )
         obs-studio                          # Free and open source software for video recording and live streaming
         pinta                               # Drawing/editing program modeled after Paint.NET
+        qutebrowser                         # Keyboard-focused browser with a minimal GUI
         slurp                               # Select a region in a Wayland compositor
         superTux                            # Classic 2D jump'n run sidescroller game
         tor-browser                         # Privacy-focused browser routing traffic through the Tor network
+        ungoogled-chromium                  # Open source web browser from Google, with dependencies on Google web services removed
         vscode                              # Open source source code editor developed by Microsoft for Windows, Linux and macOS 
         wireshark                           # Powerful network protocol analyzer
     ];
