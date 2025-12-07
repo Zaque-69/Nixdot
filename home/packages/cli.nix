@@ -5,16 +5,20 @@
         binwalk                                     # Firmware Analysis Tool
         brightnessctl                               # This program allows you read and control device brightness
         curl                                        # Command line tool for transferring files with URL syntax
+        dirb                                        # Web content scanner
+        dirbuster                                   # Brute force directories and files names on web/application servers
         direnv                                      # A shell extension that manages your environment
         dunst                                       # Lightweight and customizable notification daemon
         exiftool                                    # Tool to read, write and edit EXIF meta information 
+        ffuf                                        # Tool for web fuzzing
         file                                        # Program that shows the type of files
+        foremost                                    # Recover files based on their contents
         gammastep                                   # Screen color temperature manager
         gdb                                         # The GNU Project debugger
         grim                                        # Grab images from a Wayland compositor
         htop                                        # Usage statistics ( apps )
         hwinfo                                      # Hardware detection tool from openSUSE
-        john
+        john                                        # John the Ripper password cracker
         lm_sensors                                  # Usage statistics
         neofetch                                    # A fast, highly customizable system info script
         nitch                                       # Simple PC presentation
@@ -25,6 +29,8 @@
         p7zip                                       # New p7zip fork with additional codecs and improvements (forked from https://sourceforge.net/projects/p7zip/)
         pngcheck                                    # Verifies the integrity of PNG, JNG and MNG files
         pngcrush                                    # PNG optimizer
+        sage                                        # Open Source Mathematics Software, free alternative to Magma, Maple, Mathematica, and Matlab
+        scalpel                                     # Recover files based on their headers, footers and internal data structures, based on Foremost
         sherlock                                    # Hunt down social media accounts by username across social networks
         sops                                        # Passwords ecryptor
         steghide                                    # Open source steganography program
@@ -36,7 +42,7 @@
         xorg.xev                                    # Key recorder
         yt-dlp                                      # Command-line tool to download videos from YouTube.com and other sites (youtube-dl fork)
         wget                                        # Tool for retrieving files using HTTP, HTTPS, and FTP
-        zenity
+        zenity                                      # Tool to display dialogs from the commandline and shell scripts
         zsteg                                       # Detect stegano-hidden data in PNG & BMP
     ];
 }
